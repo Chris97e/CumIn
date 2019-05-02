@@ -1,0 +1,85 @@
+@import url("https://fonts.googleapis.com/css?family=Lobster");
+body {
+  overflow-x: hidden;
+}
+
+.slider {
+  width: 100vw;
+  height: 70vh;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.slider .great {
+  width: 80vw;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.slider .great .container {
+  width: 33%;
+}
+
+.slider .great .left h1 {
+  font-family: "Lobster";
+  color: #ED998E;
+  text-align: right;
+  font-size: 8em;
+  margin-right: 40px;
+}
+
+.slider .great .left h1 strong {
+  font-family: "Lobster";
+  color: #F7B0A9;
+  margin-right: .35em;
+  line-height: 50px;
+}
+
+.slider .great .center p {
+  font-family: "Nunito Sans";
+  color: #CE817C;
+  padding-bottom: 60px;
+  border-right: 5px solid #EFACA0;
+}
+
+.slider .great .center button {
+  background-color: #f5c0b3;
+  background: filter-gradient(#f5c0b3, #f9a08f, horizontal);
+  background: background-image(linear-gradient(left, #f5c0b3 0%, #f4ad9f 48%, #f9a08f 100%));
+  border: none;
+  border-radius: 10px;
+  width: 200px;
+  height: 40px;
+  color: white;
+  font-weight: bold;
+  font-size: 20px;
+}
+
+.slider .great .right img {
+  width: 100%;
+  -webkit-transform: rotate(-55deg) scale(1.7);
+          transform: rotate(-55deg) scale(1.7);
+}
+/*# sourceMappingURL=main.css.map */

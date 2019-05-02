@@ -1,0 +1,79 @@
+@import url('https://fonts.googleapis.com/css?family=Lobster');
+
+$primary: #F49992;
+$primaryLight: #EFACA0;
+$primaryDark: #CE817C;
+
+$primaryHcolorLight: #F7B0A9;
+$primaryHcolor: #ED998E;
+$primaryFont: 'Nunito Sans';
+$logoFont: 'Lobster';
+
+body {
+    overflow-x: hidden;
+}
+.slider {
+    width: 100vw;
+    height: 70vh;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+
+    .great {
+        width: 80vw;
+
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+        align-items: center;
+        .container {
+            width: 33%;
+        }
+        .left  {
+            h1 {
+                font-family: $logoFont;
+                color: $primaryHcolor;
+                text-align: right;
+                font-size: 8em;
+                margin-right: 40px;
+                strong{
+                    font-family: $logoFont;  
+                    color: $primaryHcolorLight;
+                    margin-right: .35em;
+                    line-height: 50px;
+                }
+    
+            }
+        }
+        .center {
+            p {
+                font-family: $primaryFont;
+                color: $primaryDark;
+                padding-bottom: 60px;
+                border-right: 5px solid $primaryLight;
+                
+            }
+            button {
+                background-color: rgba(245,192,179,1);
+                background: filter-gradient(#f5c0b3, #f9a08f, horizontal);
+                background: background-image(linear-gradient(left, rgba(245,192,179,1) 0%, rgba(244,173,159,1) 48%, rgba(249,160,143,1) 100%));
+                border: none;
+                border-radius: 10px;
+                width: 200px;
+                height: 40px;
+
+                color: white;
+                font-weight: bold;
+                font-size: 20px;
+            }
+        }
+        .right {
+            img {
+                width: 100%;
+
+                transform: rotate(-55deg) scale(1.7);
+            }
+        }
+    }
+}

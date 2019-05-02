@@ -1,13 +1,14 @@
 @import url('https://fonts.googleapis.com/css?family=Nunito+Sans:300,400,600,700,800,900');
+@import url('https://fonts.googleapis.com/css?family=Lobster');
 
 $primary: #F49992;
 $primaryLight: #EFACA0;
 $primaryFont: 'Nunito Sans';
+$logoFont: 'Lobster';
 
 * {
     font-family: $primaryFont;
 }
-
 .icon {
     fill: $primaryLight;
     svg {
@@ -70,7 +71,4 @@ header {
             }
         }
     }
-}
-body {
-    
 }
