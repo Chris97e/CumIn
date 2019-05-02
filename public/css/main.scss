@@ -12,7 +12,13 @@ $logoFont: 'Lobster';
 body {
     overflow-x: hidden;
 }
+* {
+    margin: 0;
+    padding: 0;
+    
+}
 .slider {
+    margin-top: 50px;
     width: 100vw;
     height: 70vh;
     display: flex;
@@ -35,37 +41,50 @@ body {
                 font-family: $logoFont;
                 color: $primaryHcolor;
                 text-align: right;
-                font-size: 8em;
+                font-size: 9em;
                 margin-right: 40px;
+                margin-top: 150px;
                 strong{
                     font-family: $logoFont;  
                     color: $primaryHcolorLight;
                     margin-right: .35em;
-                    line-height: 50px;
+                    line-height: 55px;
                 }
     
             }
         }
         .center {
-            p {
+            .texto{
+                width: 100%;
+                 p {
+                    
+                width: 80%;
                 font-family: $primaryFont;
                 color: $primaryDark;
                 padding-bottom: 60px;
-                border-right: 5px solid $primaryLight;
+                margin-top: 200px;
+                font-weight: 100;
                 
+                }
+                border-right: 8px solid rgba(247,176,169,0.45);
+                border-bottom: 8px solid rgba(247,176,169,0.45);
             }
             button {
-                background-color: rgba(245,192,179,1);
-                background: filter-gradient(#f5c0b3, #f9a08f, horizontal);
-                background: background-image(linear-gradient(left, rgba(245,192,179,1) 0%, rgba(244,173,159,1) 48%, rgba(249,160,143,1) 100%));
+               
                 border: none;
                 border-radius: 10px;
-                width: 200px;
+                margin-top: 50px;
+                width: 150px;
                 height: 40px;
-
+                cursor: pointer;
                 color: white;
                 font-weight: bold;
                 font-size: 20px;
+                background: #f5c0b3; /* Old browsers */
+background: -moz-linear-gradient(left, #f5c0b3 0%, #f4ad9f 50%, #f9a08f 100%); /* FF3.6-15 */
+background: -webkit-linear-gradient(left, #f5c0b3 0%,#f4ad9f 50%,#f9a08f 100%); /* Chrome10-25,Safari5.1-6 */
+background: linear-gradient(to right, #f5c0b3 0%,#f4ad9f 50%,#f9a08f 100%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#f5c0b3', endColorstr='#f9a08f',GradientType=1 ); /* IE6-9 */
             }
         }
         .right {
@@ -77,3 +96,79 @@ body {
         }
     }
 }
+
+.transitor {
+    margin-top: -40px;
+    width: 100vw;
+    
+    svg {
+        width: 100%;
+        fill: #F7D6D0;
+    }
+    
+}
+
+.chars {
+    width: 100vw;
+    height: 90vh;
+    background: #F7D6D0;
+    margin-top: -90px;
+
+}
+
+.backgroundtop{
+    width: 100vw;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    position: absolute;
+    top:0;
+    margin-top: -80px;
+    
+    svg {
+       fill: #F7D6D0;
+    }
+
+}
+
+.letrasFondo{
+width: 100vw;
+height: 100vh;
+position: absolute;
+top: 0;
+left: 0;
+z-index: -1;
+text-align: justify;
+color: #EEE;
+display: flex;
+flex-flow: row wrap;
+.decoracion{
+    box-sizing: border-box;
+    width: 50%;
+    height: 50%;
+
+    p{
+        font-family: $logoFont;
+        font-size: 150px;
+        color: #FBEAE9;
+    }
+
+    .unot{
+        margin-top: 10%;
+        margin-left: 4%;
+        
+    }
+
+    .cuatrot{
+        margin-top: 20%;
+        margin-left: 5%;
+        
+    }
+}
+
+
+
+
+}
+

@@ -3,7 +3,13 @@ body {
   overflow-x: hidden;
 }
 
+* {
+  margin: 0;
+  padding: 0;
+}
+
 .slider {
+  margin-top: 50px;
   width: 100vw;
   height: 70vh;
   display: -webkit-box;
@@ -46,40 +52,139 @@ body {
   font-family: "Lobster";
   color: #ED998E;
   text-align: right;
-  font-size: 8em;
+  font-size: 9em;
   margin-right: 40px;
+  margin-top: 150px;
 }
 
 .slider .great .left h1 strong {
   font-family: "Lobster";
   color: #F7B0A9;
   margin-right: .35em;
-  line-height: 50px;
+  line-height: 55px;
 }
 
-.slider .great .center p {
+.slider .great .center .texto {
+  width: 100%;
+  border-right: 8px solid rgba(247, 176, 169, 0.45);
+  border-bottom: 8px solid rgba(247, 176, 169, 0.45);
+}
+
+.slider .great .center .texto p {
+  width: 80%;
   font-family: "Nunito Sans";
   color: #CE817C;
   padding-bottom: 60px;
-  border-right: 5px solid #EFACA0;
+  margin-top: 200px;
+  font-weight: 100;
 }
 
 .slider .great .center button {
-  background-color: #f5c0b3;
-  background: filter-gradient(#f5c0b3, #f9a08f, horizontal);
-  background: background-image(linear-gradient(left, #f5c0b3 0%, #f4ad9f 48%, #f9a08f 100%));
   border: none;
   border-radius: 10px;
-  width: 200px;
+  margin-top: 50px;
+  width: 150px;
   height: 40px;
+  cursor: pointer;
   color: white;
   font-weight: bold;
   font-size: 20px;
+  background: #f5c0b3;
+  /* Old browsers */
+  /* FF3.6-15 */
+  /* Chrome10-25,Safari5.1-6 */
+  background: -webkit-gradient(linear, left top, right top, from(#f5c0b3), color-stop(50%, #f4ad9f), to(#f9a08f));
+  background: linear-gradient(to right, #f5c0b3 0%, #f4ad9f 50%, #f9a08f 100%);
+  /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+  filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#f5c0b3', endColorstr='#f9a08f',GradientType=1 );
+  /* IE6-9 */
 }
 
 .slider .great .right img {
   width: 100%;
   -webkit-transform: rotate(-55deg) scale(1.7);
           transform: rotate(-55deg) scale(1.7);
+}
+
+.transitor {
+  margin-top: -40px;
+  width: 100vw;
+}
+
+.transitor svg {
+  width: 100%;
+  fill: #F7D6D0;
+}
+
+.chars {
+  width: 100vw;
+  height: 90vh;
+  background: #F7D6D0;
+  margin-top: -90px;
+}
+
+.backgroundtop {
+  width: 100vw;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  position: absolute;
+  top: 0;
+  margin-top: -80px;
+}
+
+.backgroundtop svg {
+  fill: #F7D6D0;
+}
+
+.letrasFondo {
+  width: 100vw;
+  height: 100vh;
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: -1;
+  text-align: justify;
+  color: #EEE;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-flow: row wrap;
+          flex-flow: row wrap;
+}
+
+.letrasFondo .decoracion {
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  width: 50%;
+  height: 50%;
+}
+
+.letrasFondo .decoracion p {
+  font-family: "Lobster";
+  font-size: 150px;
+  color: #FBEAE9;
+}
+
+.letrasFondo .decoracion .unot {
+  margin-top: 10%;
+  margin-left: 4%;
+}
+
+.letrasFondo .decoracion .cuatrot {
+  margin-top: 20%;
+  margin-left: 5%;
 }
 /*# sourceMappingURL=main.css.map */
