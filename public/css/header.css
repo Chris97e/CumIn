@@ -1,0 +1,110 @@
+@import url("https://fonts.googleapis.com/css?family=Nunito+Sans:300,400,600,700,800,900");
+* {
+  font-family: "Nunito Sans";
+}
+
+.icon {
+  fill: #EFACA0;
+}
+
+.icon svg {
+  width: 20px;
+  height: 20px;
+}
+
+.icon:hover {
+  fill: #F49992;
+  -webkit-transition: .5s ease fill;
+  transition: .5s ease fill;
+}
+
+header {
+  width: 100vw;
+}
+
+header nav {
+  width: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+header nav .container {
+  width: 50%;
+}
+
+header nav .container ul {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+}
+
+header nav .container ul li {
+  margin: 0 10px;
+  list-style: none;
+}
+
+header nav .container ul li a {
+  text-decoration: none;
+  color: #EFACA0;
+  font-size: 15px;
+  -webkit-transition: .5s ease color;
+  transition: .5s ease color;
+}
+
+header nav .container ul li a:hover {
+  color: #F49992;
+  border-bottom: 1px solid #F49992;
+}
+
+header nav .left {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -webkit-box-pack: start;
+      -ms-flex-pack: start;
+          justify-content: flex-start;
+}
+
+header nav .left ul {
+  -webkit-box-pack: start;
+      -ms-flex-pack: start;
+          justify-content: flex-start;
+  margin-left: -20px;
+}
+
+header nav .right {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -webkit-box-pack: end;
+      -ms-flex-pack: end;
+          justify-content: flex-end;
+}
+
+header nav .right ul {
+  -webkit-box-pack: end;
+      -ms-flex-pack: end;
+          justify-content: flex-end;
+  margin-right: 20px;
+}
+/*# sourceMappingURL=header.css.map */
