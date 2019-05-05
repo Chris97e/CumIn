@@ -8,6 +8,8 @@ $logoFont: 'Lobster';
 
 * {
     font-family: $primaryFont;
+    margin: 0;
+    padding: 0;
 }
 .icon {
     fill: $primaryLight;
@@ -19,21 +21,40 @@ $logoFont: 'Lobster';
     &:hover {
         fill: $primary;
         transition: .5s ease fill;
+        cursor: pointer;
+        
+        
     }
 }
 
-.outstanding {
-    padding:  3px 8px;
-    border: 2px $primaryLight solid;
-    border-radius: 10px;
+
+.icondesplegable{
+    fill: #EFACA0;
+    
+    svg {
+        width: 15px;
+        height: 15px;
+        margin-left: -15px;
+        margin-top: 7px;
+        
+    }
+    
+    &:hover {
+        fill: $primary;
+        transition: .5s ease fill;
+        cursor: pointer;
+    }
+    
 }
+
+
 
 header {
     width: 100vw;
     position: fixed;
     top: 0;
     z-index: 100;
-
+    
     nav {
         
         padding: 30px;
@@ -41,7 +62,7 @@ header {
         width: 100%;
         display: flex;
         flex-direction: row;
-       
+        
         justify-content: center;
         .container {
             width: 50%;
@@ -51,16 +72,15 @@ header {
                 li {
                     margin: 0 10px;
                     list-style: none;
+                    
                     a{
                         text-decoration: none;
                         color: $primaryLight;
                         font-size: 15px;
                         transition: .5s ease color;
-                        &:hover {
-                            color: $primary;
-                            border-bottom: 1px solid $primary;
-                        }
+                        
                     }
+                    
                 }
             }
         }
@@ -70,8 +90,8 @@ header {
             justify-content: flex-start;
             ul {
                 justify-content: flex-start;
-
-
+                
+                
             }
         }
         .right {
@@ -84,3 +104,64 @@ header {
         }
     }
 }
+
+.outstanding {
+    padding:  3px 8px;
+    border: 2px $primaryLight solid;
+    border-radius: 10px;
+    text-decoration: none;
+    color: $primaryLight;
+    font-size: 15px;
+    transition: .5s ease color;
+    
+}
+
+
+#menubottom{
+    text-decoration: none;
+    color: $primaryLight;
+    font-size: 15px;
+    transition: .5s ease color;
+    
+}
+
+
+#menubottom:hover{
+    color: $primary;
+    border-bottom: 1px solid $primary;
+}
+
+#desplegable{
+    display: none;
+    flex-direction: column;
+    background: white;
+    border: 2px solid #EFACA0;
+    border-radius: 10px;
+    margin-left: -45pt;
+    margin-top: 10pt;
+    padding: 4pt;
+    align-items: center;
+    height: 150px;
+    justify-content: space-around;
+    
+    
+    #item{
+        
+        text-align: center;
+        
+        
+        &:hover{
+
+            color: $primary;
+            border-bottom: 1px solid $primary;
+        }
+        
+    }
+    
+    
+    &:hover{
+        display: flex;
+    }
+}
+
+

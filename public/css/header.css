@@ -2,6 +2,8 @@
 @import url("https://fonts.googleapis.com/css?family=Lobster");
 * {
   font-family: "Nunito Sans";
+  margin: 0;
+  padding: 0;
 }
 
 .icon {
@@ -17,12 +19,25 @@
   fill: #F49992;
   -webkit-transition: .5s ease fill;
   transition: .5s ease fill;
+  cursor: pointer;
 }
 
-.outstanding {
-  padding: 3px 8px;
-  border: 2px #EFACA0 solid;
-  border-radius: 10px;
+.icondesplegable {
+  fill: #EFACA0;
+}
+
+.icondesplegable svg {
+  width: 15px;
+  height: 15px;
+  margin-left: -15px;
+  margin-top: 7px;
+}
+
+.icondesplegable:hover {
+  fill: #F49992;
+  -webkit-transition: .5s ease fill;
+  transition: .5s ease fill;
+  cursor: pointer;
 }
 
 header {
@@ -76,11 +91,6 @@ header nav .container ul li a {
   transition: .5s ease color;
 }
 
-header nav .container ul li a:hover {
-  color: #F49992;
-  border-bottom: 1px solid #F49992;
-}
-
 header nav .left {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -117,5 +127,64 @@ header nav .right ul {
   -webkit-box-pack: end;
       -ms-flex-pack: end;
           justify-content: flex-end;
+}
+
+.outstanding {
+  padding: 3px 8px;
+  border: 2px #EFACA0 solid;
+  border-radius: 10px;
+  text-decoration: none;
+  color: #EFACA0;
+  font-size: 15px;
+  -webkit-transition: .5s ease color;
+  transition: .5s ease color;
+}
+
+#menubottom {
+  text-decoration: none;
+  color: #EFACA0;
+  font-size: 15px;
+  -webkit-transition: .5s ease color;
+  transition: .5s ease color;
+}
+
+#menubottom:hover {
+  color: #F49992;
+  border-bottom: 1px solid #F49992;
+}
+
+#desplegable {
+  display: none;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  background: white;
+  border: 2px solid #EFACA0;
+  border-radius: 10px;
+  margin-left: -45pt;
+  margin-top: 10pt;
+  padding: 4pt;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  height: 150px;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
+}
+
+#desplegable #item {
+  text-align: center;
+}
+
+#desplegable #item:hover {
+  color: #F49992;
+  border-bottom: 1px solid #F49992;
+}
+
+#desplegable:hover {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
 }
 /*# sourceMappingURL=header.css.map */
