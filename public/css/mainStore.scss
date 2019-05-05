@@ -1,0 +1,169 @@
+@import url('https://fonts.googleapis.com/css?family=Lobster');
+
+$primary: #F49992;
+$primaryLight: #EFACA0;
+$primaryDark: #CE817C;
+
+$primaryHcolorLight: #F7B0A9;
+$primaryHcolor: #ED998E;
+$primaryFont: 'Nunito Sans';
+$logoFont: 'Lobster';
+
+*{
+    margin: 0;
+    padding: 0;
+    
+}
+
+.container {
+    width: 33%;
+    
+}
+.center  {
+    
+    
+    display: flex;
+    flex-flow: column nowrap;
+    justify-content: center;;
+    align-items: center;
+    h1 {
+        font-family: $logoFont;
+        color: $primaryHcolor;
+        text-align:  end;
+        font-size: 20px;
+        margin-right: 40px;
+        
+        strong{
+            font-family: $logoFont;  
+            color: $primaryHcolorLight;
+            
+            
+        }
+        
+    }
+    
+    .logoAbajo{
+        margin-top: -7px;
+        margin-left: 6px;
+        
+        
+        
+    }
+}
+
+::placeholder { /* Chrome, Firefox, Opera, Safari 10.1+ */
+    color: #ED998E;
+    opacity: 1; /* Firefox */
+    outline: none;
+    outline-width: 0;
+}
+
+:-ms-input-placeholder { /* Internet Explorer 10-11 */
+    color: #ED998E;
+    outline: none;
+    outline-width: 0;
+}
+
+::-ms-input-placeholder { /* Microsoft Edge */
+    color: #ED998E;
+    outline: none;
+    outline-width: 0;
+}
+
+
+
+//
+
+
+
+header{
+    position: inherit;
+    box-sizing: border-box;
+}
+
+.sostenedor{
+    width: 100vw;   
+    height: 90vh;   
+    box-sizing: border-box;
+    
+    position: absolute;
+    
+    .barraBusqueda{
+        height: 30%;
+        border: 2px solid blue;
+        box-sizing: border-box;
+        position: relative;
+        
+        .espacio{
+            height: 30%;
+        }
+        
+        .busqueda{
+            display: flex;
+            flex-flow: row nowrap;
+            justify-content: center;
+            
+            input{
+                width: 70%;
+                height: 30%;
+                padding: 12px 20px 0px;
+                margin: 8px 0;
+                border: none;
+                border-bottom: 1.1pt solid #CE817C;
+                box-sizing: border-box;
+                text-align: center;
+                font-family: $primaryFont;
+                font-size: 25pt;
+                color: #ED998E;
+                background-image: url('./imgs/search.png');
+                background-image: url('./imgs/search.png');
+                
+                
+                
+            }
+            
+            input[type=text]:focus{
+               
+                outline-width: 0;
+                outline: none;
+                
+                
+                
+            }
+            
+            
+        }
+        
+        
+        
+        
+        .filtros{
+            
+            border: 2px solid green;
+            display: flex;
+            flex-flow: row nowrap;
+            justify-content: center;
+            
+            
+            
+            
+            
+        }
+    }
+    
+    .productos{
+        height: 65%;
+        
+        box-sizing: border-box;
+    }
+    
+    .carga{
+        
+        height: 5%;
+        
+        box-sizing: border-box;
+        
+    }
+    
+    
+}

@@ -1,0 +1,181 @@
+@import url("https://fonts.googleapis.com/css?family=Lobster");
+* {
+  margin: 0;
+  padding: 0;
+}
+
+.container {
+  width: 33%;
+}
+
+.center {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-flow: column nowrap;
+          flex-flow: column nowrap;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.center h1 {
+  font-family: "Lobster";
+  color: #ED998E;
+  text-align: end;
+  font-size: 20px;
+  margin-right: 40px;
+}
+
+.center h1 strong {
+  font-family: "Lobster";
+  color: #F7B0A9;
+}
+
+.center .logoAbajo {
+  margin-top: -7px;
+  margin-left: 6px;
+}
+
+::-webkit-input-placeholder {
+  /* Chrome, Firefox, Opera, Safari 10.1+ */
+  color: #ED998E;
+  opacity: 1;
+  /* Firefox */
+  outline: none;
+  outline-width: 0;
+}
+
+:-ms-input-placeholder {
+  /* Chrome, Firefox, Opera, Safari 10.1+ */
+  color: #ED998E;
+  opacity: 1;
+  /* Firefox */
+  outline: none;
+  outline-width: 0;
+}
+
+::-ms-input-placeholder {
+  /* Chrome, Firefox, Opera, Safari 10.1+ */
+  color: #ED998E;
+  opacity: 1;
+  /* Firefox */
+  outline: none;
+  outline-width: 0;
+}
+
+::placeholder {
+  /* Chrome, Firefox, Opera, Safari 10.1+ */
+  color: #ED998E;
+  opacity: 1;
+  /* Firefox */
+  outline: none;
+  outline-width: 0;
+}
+
+:-ms-input-placeholder {
+  /* Internet Explorer 10-11 */
+  color: #ED998E;
+  outline: none;
+  outline-width: 0;
+}
+
+::-ms-input-placeholder {
+  /* Microsoft Edge */
+  color: #ED998E;
+  outline: none;
+  outline-width: 0;
+}
+
+header {
+  position: inherit;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+}
+
+.sostenedor {
+  width: 100vw;
+  height: 90vh;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  position: absolute;
+}
+
+.sostenedor .barraBusqueda {
+  height: 30%;
+  border: 2px solid blue;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  position: relative;
+}
+
+.sostenedor .barraBusqueda .espacio {
+  height: 30%;
+}
+
+.sostenedor .barraBusqueda .busqueda {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-flow: row nowrap;
+          flex-flow: row nowrap;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+.sostenedor .barraBusqueda .busqueda input {
+  width: 70%;
+  height: 30%;
+  padding: 12px 20px 0px;
+  margin: 8px 0;
+  border: none;
+  border-bottom: 1.1pt solid #CE817C;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  text-align: center;
+  font-family: "Nunito Sans";
+  font-size: 25pt;
+  color: #ED998E;
+  background-image: url("./imgs/search.png");
+  background-image: url("./imgs/search.png");
+}
+
+.sostenedor .barraBusqueda .busqueda input[type=text]:focus {
+  outline-width: 0;
+  outline: none;
+}
+
+.sostenedor .barraBusqueda .filtros {
+  border: 2px solid green;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-flow: row nowrap;
+          flex-flow: row nowrap;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+.sostenedor .productos {
+  height: 65%;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+}
+
+.sostenedor .carga {
+  height: 5%;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+}
+/*# sourceMappingURL=mainStore.css.map */

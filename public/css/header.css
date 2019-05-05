@@ -40,8 +40,27 @@
   cursor: pointer;
 }
 
+#desple {
+  fill: #EFACA0;
+}
+
+#desple svg {
+  width: 15px;
+  height: 15px;
+  margin-left: -15px;
+  margin-top: 7px;
+}
+
+#desple:hover {
+  fill: #F49992;
+  -webkit-transition: .5s ease fill;
+  transition: .5s ease fill;
+  cursor: pointer;
+}
+
 header {
   width: 100vw;
+  height: 10vh;
   position: fixed;
   top: 0;
   z-index: 100;
