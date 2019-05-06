@@ -1,4 +1,7 @@
 @import url('https://fonts.googleapis.com/css?family=Lobster');
+@import url('https://fonts.googleapis.com/css?family=Open+Sans:300,400,600,700');
+@import url('https://fonts.googleapis.com/css?family=Nunito+Sans:300,400,600,700,800,900');
+
 
 $primary: #F49992;
 $primaryLight: #EFACA0;
@@ -7,6 +10,7 @@ $primaryDark: #CE817C;
 $primaryHcolorLight: #F7B0A9;
 $primaryHcolor: #ED998E;
 $primaryFont: 'Nunito Sans';
+$openSans: 'Open Sans';
 $logoFont: 'Lobster';
 
 *{
@@ -14,6 +18,94 @@ $logoFont: 'Lobster';
     padding: 0;
     
 }
+
+//////////// INPUT RANGE STYLES
+input[type=range] {
+    height: 0px;
+    -webkit-appearance: none;
+    margin: 10px 0;
+    width: 100%;
+  }
+  input[type=range]:focus {
+    outline: none;
+  }
+  input[type=range]::-webkit-slider-runnable-track {
+    width: 100%;
+    height: 3px;
+    cursor: pointer;
+    animate: 0.2s;
+    box-shadow: 0px 0px 0px #000000;
+    background: #F5C5C1;
+    border-radius: 0px;
+    border: 0px solid #F5C5C1;
+  }
+  input[type=range]::-webkit-slider-thumb {
+    box-shadow: 0px 0px 1px #F5C5C1;
+    border: 0px solid #F5C5C1;
+    height: 12px;
+    width: 12px;
+    border-radius: 23px;
+    background: #ED978C;
+    cursor: pointer;
+    -webkit-appearance: none;
+    margin-top: -3.5px;
+  }
+  input[type=range]:focus::-webkit-slider-runnable-track {
+    background: #F5C5C1;
+  }
+  input[type=range]::-moz-range-track {
+    width: 100%;
+    height: 3px;
+    cursor: pointer;
+    animate: 0.2s;
+    box-shadow: 0px 0px 0px #000000;
+    background: #F5C5C1;
+    border-radius: 0px;
+    border: 0px solid #F5C5C1;
+  }
+  input[type=range]::-moz-range-thumb {
+    box-shadow: 0px 0px 1px #F5C5C1;
+    border: 0px solid #F5C5C1;
+    height: 10px;
+    width: 10px;
+    border-radius: 23px;
+    background: #ED978C;
+    cursor: pointer;
+  }
+  input[type=range]::-ms-track {
+    width: 100%;
+    height: 3px;
+    cursor: pointer;
+    animate: 0.2s;
+    background: transparent;
+    border-color: transparent;
+    color: transparent;
+  }
+  input[type=range]::-ms-fill-lower {
+    background: #F5C5C1;
+  
+  }
+  input[type=range]::-ms-fill-upper {
+    background: #F5C5C1;
+   
+  }
+  input[type=range]::-ms-thumb {
+    
+    box-shadow: 0px 0px 1px #F5C5C1;
+    border: 0px solid #F5C5C1;
+    height: 10px;
+    width: 10px;
+    border-radius: 23px;
+    background: #ED978C;
+    cursor: pointer;
+  }
+  input[type=range]:focus::-ms-fill-lower {
+    background: #F5C5C1;
+  }
+  input[type=range]:focus::-ms-fill-upper {
+    background: #F5C5C1;
+  }
+////////// END INPUT RANGE STYLES
 
 .container {
     width: 33%;
@@ -52,20 +144,20 @@ $logoFont: 'Lobster';
 }
 
 ::placeholder { /* Chrome, Firefox, Opera, Safari 10.1+ */
-    color: #ED998E;
+    color: rgba(273, 153, 142,0.3);
     opacity: 1; /* Firefox */
     outline: none;
     outline-width: 0;
 }
 
 :-ms-input-placeholder { /* Internet Explorer 10-11 */
-    color: #ED998E;
+    color: rgba(273, 153, 142,0.3);
     outline: none;
     outline-width: 0;
 }
 
 ::-ms-input-placeholder { /* Microsoft Edge */
-    color: #ED998E;
+    color: rgba(273, 153, 142,0.3);
     outline: none;
     outline-width: 0;
 }
@@ -85,14 +177,17 @@ header{
     width: 100vw;   
     height: 90vh;   
     box-sizing: border-box;
-    
+    justify-content: center;
+    align-content: center;
     position: absolute;
     
     .barraBusqueda{
         height: 30%;
-        border: 2px solid blue;
+        
         box-sizing: border-box;
         position: relative;
+        
+        
         
         .espacio{
             height: 30%;
@@ -103,29 +198,41 @@ header{
             flex-flow: row nowrap;
             justify-content: center;
             
+            
+            
+            
+            
             input{
-                width: 70%;
+                width: 80%;
                 height: 30%;
                 padding: 12px 20px 0px;
                 margin: 8px 0;
                 border: none;
-                border-bottom: 1.1pt solid #CE817C;
+                border-bottom: 2px solid #F7B0A9;
                 box-sizing: border-box;
                 text-align: center;
                 font-family: $primaryFont;
                 font-size: 25pt;
                 color: #ED998E;
-                background-image: url('./imgs/search.png');
-                background-image: url('./imgs/search.png');
+                -webkit-transition: width 0.4s ease-in-out;
+                transition: width 0.4s ease-in-out;
+                background-image: url('/imgs/search.png');
+                background-repeat: no-repeat;
+                background-size: 20pt;
+                
+                background-position: 275px 20px; 
+                
+                
                 
                 
                 
             }
             
             input[type=text]:focus{
-               
+                
                 outline-width: 0;
                 outline: none;
+                background-image: none;
                 
                 
                 
@@ -137,17 +244,219 @@ header{
         
         
         
+        
+        
         .filtros{
             
-            border: 2px solid green;
+            
             display: flex;
+            width: 80%;
+            margin-left: 10%;
+            
             flex-flow: row nowrap;
-            justify-content: center;
+            //border: 2px solid #CE817C;
+            
+            align-content: center;
+            justify-content: space-around;
+            
+            .categoria{
+                display: flex;
+                flex-flow: row nowrap;
+
+                .selector{
+                    background: none;
+                    border: none;
+                    outline: none;
+                    font-family: $primaryFont;
+                    font-weight: 600;
+                    
+                
+                
+                    .flecha{
+                
+                        margin-left: 3px;
+                    }
+                
+                    
+                    .boton{
+                        color: rgba(237, 153, 142, 0.7);
+                        margin-left: 10px;
+                        
+                        
+                    }
+                    
+                    .items{
+                        // listo tipos de categorias
+                        display: none;
+                        flex-flow: row nowrap;
+                        position: absolute;
+                        margin-top: 30px;
+                        margin-left: -60px;
+                        color: #D89C93;
+                        font-weight: 300;
+                        background: rgba(247, 235, 235, 0.5);
+                        border-radius: 10px;
+                        cursor: pointer;
+                        
+                        
+                        .categorias{
+                            
+                            padding: 2px 5px;
+                            cursor: pointer;
+                            
+                            
+                        }
+                        
+                        
+                        
+                    }
+                    
+                    
+                    
+                }
+
+
+
+
+
+
+            }
+
+
+            .ordenar{
+
+                display: flex;
+                flex-flow: row nowrap;
+                font-display: $primaryFont;
+                color: rgba(237, 153, 142, 0.7);
+                font-weight: 600;
+
+
+                .selector{
+                    background: none;
+                    border: none;
+                    outline: none;
+                    font-family: $primaryFont;
+                    font-weight: 600;
+                    
+                    
+                    .items{
+                        // listo ordenamineto de categorias
+                        display: none;
+                        flex-flow: row nowrap;
+                        position: absolute;
+                        margin-top: 30px;
+                        margin-left: -200px;
+                        color: #D89C93;
+                        font-weight: 300;
+                        background: rgba(247, 235, 235, 0.5);
+                        border-radius: 10px;
+                        cursor: pointer;
+                        
+                        
+                        .categorias{
+                            
+                            padding: 2px 5px;
+                            cursor: pointer;
+                            
+                            
+                        }
+                        
+                        
+                        
+                    }
+                    
+                    
+                    
+                }
+
+
+            }
+
+            .marca{
+
+                display: flex;
+                flex-flow: row nowrap;
+                font-display: $primaryFont;
+                color: rgba(237, 153, 142, 0.7);
+                font-weight: 600;
+
+
+                .selector{
+                    background: none;
+                    border: none;
+                    outline: none;
+                    font-family: $primaryFont;
+                    font-weight: 600;
+                    
+                    
+                    .items{
+                        // listo clasificación por marcas
+                        display: none;
+                        flex-flow: row nowrap;
+                        position: absolute;
+                        margin-top: 30px;
+                        margin-left: -340px;
+                        color: #D89C93;
+                        font-weight: 300;
+                        background: rgba(247, 235, 235, 0.5);
+                        border-radius: 10px;
+                        cursor: pointer;
+                        
+                        
+                        .categorias{
+                            
+                            padding: 2px 5px;
+                            cursor: pointer;
+                            
+                            
+                        }
+                        
+                        
+                        
+                    }
+                    
+                    
+                    
+                }
+
+
+
+
+            }
             
             
-            
-            
-            
+            .precio{
+                
+                display: flex;
+                flex-flow: row nowrap;
+                padding-right: 5px;
+                
+                
+                
+                .btn{
+                    
+                    
+                    
+                    font-size: 10pt;
+                    color: rgba(237, 153, 142, 0.65);
+                    font-weight: 600;
+                    background: rgba(247, 235, 235, 0.5);
+                    border-radius: 3px;
+                    padding: 2px 3px;
+                    margin-left: 10px;
+                    
+
+                    
+                }
+
+                .rango{
+                    margin-left: 5px;
+                    margin-right: 5px;
+                }
+
+
+            }
         }
     }
     
@@ -167,3 +476,20 @@ header{
     
     
 }
+
+.tfiltros{
+    font-family: $primaryFont;
+    font-weight: 600;
+    color: #ED978C;
+    font-size: 12pt;
+    
+}
+
+
+
+.indicadores{
+    color: rgba(237, 153, 142, 0.5);
+}
+
+
+
