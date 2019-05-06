@@ -25,11 +25,11 @@ input[type=range] {
     -webkit-appearance: none;
     margin: 10px 0;
     width: 100%;
-  }
-  input[type=range]:focus {
+}
+input[type=range]:focus {
     outline: none;
-  }
-  input[type=range]::-webkit-slider-runnable-track {
+}
+input[type=range]::-webkit-slider-runnable-track {
     width: 100%;
     height: 3px;
     cursor: pointer;
@@ -38,8 +38,8 @@ input[type=range] {
     background: #F5C5C1;
     border-radius: 0px;
     border: 0px solid #F5C5C1;
-  }
-  input[type=range]::-webkit-slider-thumb {
+}
+input[type=range]::-webkit-slider-thumb {
     box-shadow: 0px 0px 1px #F5C5C1;
     border: 0px solid #F5C5C1;
     height: 12px;
@@ -49,11 +49,11 @@ input[type=range] {
     cursor: pointer;
     -webkit-appearance: none;
     margin-top: -3.5px;
-  }
-  input[type=range]:focus::-webkit-slider-runnable-track {
+}
+input[type=range]:focus::-webkit-slider-runnable-track {
     background: #F5C5C1;
-  }
-  input[type=range]::-moz-range-track {
+}
+input[type=range]::-moz-range-track {
     width: 100%;
     height: 3px;
     cursor: pointer;
@@ -62,8 +62,8 @@ input[type=range] {
     background: #F5C5C1;
     border-radius: 0px;
     border: 0px solid #F5C5C1;
-  }
-  input[type=range]::-moz-range-thumb {
+}
+input[type=range]::-moz-range-thumb {
     box-shadow: 0px 0px 1px #F5C5C1;
     border: 0px solid #F5C5C1;
     height: 10px;
@@ -71,8 +71,8 @@ input[type=range] {
     border-radius: 23px;
     background: #ED978C;
     cursor: pointer;
-  }
-  input[type=range]::-ms-track {
+}
+input[type=range]::-ms-track {
     width: 100%;
     height: 3px;
     cursor: pointer;
@@ -80,16 +80,16 @@ input[type=range] {
     background: transparent;
     border-color: transparent;
     color: transparent;
-  }
-  input[type=range]::-ms-fill-lower {
+}
+input[type=range]::-ms-fill-lower {
     background: #F5C5C1;
-  
-  }
-  input[type=range]::-ms-fill-upper {
+    
+}
+input[type=range]::-ms-fill-upper {
     background: #F5C5C1;
-   
-  }
-  input[type=range]::-ms-thumb {
+    
+}
+input[type=range]::-ms-thumb {
     
     box-shadow: 0px 0px 1px #F5C5C1;
     border: 0px solid #F5C5C1;
@@ -98,13 +98,13 @@ input[type=range] {
     border-radius: 23px;
     background: #ED978C;
     cursor: pointer;
-  }
-  input[type=range]:focus::-ms-fill-lower {
+}
+input[type=range]:focus::-ms-fill-lower {
     background: #F5C5C1;
-  }
-  input[type=range]:focus::-ms-fill-upper {
+}
+input[type=range]:focus::-ms-fill-upper {
     background: #F5C5C1;
-  }
+}
 ////////// END INPUT RANGE STYLES
 
 .container {
@@ -219,10 +219,7 @@ header{
                 background-image: url('/imgs/search.png');
                 background-repeat: no-repeat;
                 background-size: 20pt;
-                
                 background-position: 275px 20px; 
-                
-                
                 
                 
                 
@@ -233,7 +230,6 @@ header{
                 outline-width: 0;
                 outline: none;
                 background-image: none;
-                
                 
                 
             }
@@ -262,7 +258,7 @@ header{
             .categoria{
                 display: flex;
                 flex-flow: row nowrap;
-
+                
                 .selector{
                     background: none;
                     border: none;
@@ -270,13 +266,13 @@ header{
                     font-family: $primaryFont;
                     font-weight: 600;
                     
-                
-                
+                    
+                    
                     .flecha{
-                
+                        
                         margin-left: 3px;
                     }
-                
+                    
                     
                     .boton{
                         color: rgba(237, 153, 142, 0.7);
@@ -314,24 +310,24 @@ header{
                     
                     
                 }
-
-
-
-
-
-
+                
+                
+                
+                
+                
+                
             }
-
-
+            
+            
             .ordenar{
-
+                
                 display: flex;
                 flex-flow: row nowrap;
                 font-display: $primaryFont;
                 color: rgba(237, 153, 142, 0.7);
                 font-weight: 600;
-
-
+                
+                
                 .selector{
                     background: none;
                     border: none;
@@ -369,19 +365,19 @@ header{
                     
                     
                 }
-
-
+                
+                
             }
-
+            
             .marca{
-
+                
                 display: flex;
                 flex-flow: row nowrap;
                 font-display: $primaryFont;
                 color: rgba(237, 153, 142, 0.7);
                 font-weight: 600;
-
-
+                
+                
                 .selector{
                     background: none;
                     border: none;
@@ -419,10 +415,10 @@ header{
                     
                     
                 }
-
-
-
-
+                
+                
+                
+                
             }
             
             
@@ -446,24 +442,29 @@ header{
                     padding: 2px 3px;
                     margin-left: 10px;
                     
-
+                    
                     
                 }
-
+                
                 .rango{
                     margin-left: 5px;
                     margin-right: 5px;
                 }
-
-
+                
+                
             }
         }
     }
     
     .productos{
         height: 65%;
-        
         box-sizing: border-box;
+        border: 2px solid red;
+
+        .store{
+    
+        }
+
     }
     
     .carga{

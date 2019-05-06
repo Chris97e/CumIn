@@ -57,12 +57,12 @@ app.get('/store', function (request, response) {
     var query = {};
     
     //Accedemos a la conección
-    var collection = db.collection('products');
+    var collection = db.collection('products ');
     collection.find(query).toArray(function (err, docs) {
         assert.equal(err, null);
         
         var contexto = {
-            products: docs,
+            products : docs,
             
         };
         
