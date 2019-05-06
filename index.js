@@ -2,6 +2,7 @@ var express = require('express'),
 engines = require('consolidate'),
 handlebars = require('handlebars');
 const MongoClient = require('mongodb').MongoClient;
+const assert = require('assert');
 var app = express();
 
 app.engine('hbs', engines.handlebars);
@@ -16,9 +17,16 @@ app.use(express.urlencoded({ extended: true }));
 
 // This is the conecction with mongodb 
 // Here I'm telling to mongodb that I want to conect specifically to the cumIn database
+
+// Connection URL
 const url = 'mongodb://localhost:27017';
+
+// Database Name
 const dbName = 'cumIn';
-const client = new MongoClient(url);
+
+// Create a new MongoClient
+const client = new MongoClient(url,{useNewUrlParser: true });
+
 var db = null;
 
 
@@ -40,11 +48,13 @@ client.connect(function (err) {
 
 
 
-app.get('/', function (req, res) {
-    res.render('home');
+app.get('/', function (request, response) {
+    response.render('home');
 });
 
-app.get('/store', function (req, res) {
+app.get('/store', function (request, response) {
+    
+    var query = {};
     
     //Accedemos a la conección
     var collection = db.collection('products');
@@ -55,6 +65,8 @@ app.get('/store', function (req, res) {
             products: docs,
             
         };
+        
+        
         response.render('store', contexto);
     });
 });

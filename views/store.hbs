@@ -54,9 +54,11 @@
                         </div>
 
                         <!-- Menu desplegable -->
+                        
 
                         <ul class="mostrarMenu" id="desplegable">
 
+                                
                             <li> <a id="item" href="#">Vibrators</a></li>
                             <li> <a id="item" href="#">Dildos</a></li>
                             <li> <a id="item" href="#">Anal</a></li>
@@ -268,20 +270,15 @@
             <div class="store">
 
                 <ul class="catalogo">
-
-                    <!-- each  -->
-
-                    <li class="vender">
-                        <img src="" alt="300">
-                        <h3>name</h3>
-                        <p>precio</p>
-                        <p>categoria</p>
-
-                    </li>
-                    <!-- each  -->
-
-
+                    {{#each products}}
+                        <li> 
+                            <h1>{{name}}</h1>
+                            
+                            <p>{{price}}</p>
+                        </li>
+                    {{/each}}
                 </ul>
+
             </div>
         </div>
         <div class="carga"></div>
