@@ -6,6 +6,10 @@
   padding: 0;
 }
 
+li {
+  list-style: none;
+}
+
 input[type=range] {
   height: 0px;
   -webkit-appearance: none;
@@ -439,6 +443,126 @@ header {
   height: 65%;
   -webkit-box-sizing: border-box;
           box-sizing: border-box;
+}
+
+.sostenedor .productos .store {
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  height: 100%;
+}
+
+.sostenedor .productos .store .catalogo {
+  width: 80%;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-flow: row wrap;
+          flex-flow: row wrap;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -ms-flex-line-pack: start;
+      align-content: flex-start;
+  overflow-y: scroll;
+}
+
+.sostenedor .productos .store .catalogo .itemVenta {
+  position: relative;
+  border-radius: 10px;
+  text-align: center;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-flow: column nowrap;
+          flex-flow: column nowrap;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-shadow: 0px 0px 25px -21px rgba(0, 0, 0, 0.82);
+  box-shadow: 0px 0px 25px -21px rgba(0, 0, 0, 0.82);
+  margin-left: 2.5%;
+  margin-right: 2.5%;
+  margin-top: 2.5%;
+  margin-bottom: 2.5%;
+  width: 20%;
+  height: 65%;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  overflow: hidden;
+}
+
+.sostenedor .productos .store .catalogo .itemVenta p {
+  font-family: "Open Sans";
+  color: rgba(237, 153, 142, 0.6);
+}
+
+.sostenedor .productos .store .catalogo .itemVenta .botones {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-flow: column nowrap;
+          flex-flow: column nowrap;
+  -ms-flex-line-pack: distribute;
+      align-content: space-around;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -ms-flex-item-align: end;
+      align-self: flex-end;
+  margin-right: 15px;
+  position: absolute;
+  top: 10px;
+  right: -3px;
+}
+
+.sostenedor .productos .store .catalogo .itemVenta .botones .vector {
+  margin: 4px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-flow: row nowrap;
+          flex-flow: row nowrap;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -ms-flex-line-pack: center;
+      align-content: center;
+}
+
+.sostenedor .productos .store .catalogo .itemVenta .botones .corazon {
+  margin-top: 10px;
+}
+
+.sostenedor .productos .store .catalogo .itemVenta h1 {
+  font-family: "Open Sans";
+  font-weight: 600;
+  font-size: 10pt;
+  color: #ED978C;
+}
+
+.sostenedor .productos .store .catalogo .itemVenta:hover {
+  -webkit-box-shadow: 0px 0px 36px -21px rgba(0, 0, 0, 0.82);
+  box-shadow: 0px 0px 36px -21px rgba(0, 0, 0, 0.82);
 }
 
 .sostenedor .carga {
