@@ -24,6 +24,7 @@ $logoFont: 'Lobster';
         cursor: pointer;
         
         
+        
     }
 }
 
@@ -43,12 +44,14 @@ $logoFont: 'Lobster';
         fill: $primary;
         transition: .5s ease fill;
         cursor: pointer;
+        
     }
     
 }
 
 #desple{
     fill: #EFACA0;
+    
     
     svg {
         width: 15px;
@@ -150,6 +153,8 @@ header {
 #menubottom:hover{
     color: $primary;
     border-bottom: 1px solid $primary;
+    
+    
 }
 
 #desplegable{
@@ -175,6 +180,7 @@ header {
 
             color: $primary;
             border-bottom: 1px solid $primary;
+            
         }
         
     }

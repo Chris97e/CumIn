@@ -30,6 +30,32 @@ const client = new MongoClient(url,{useNewUrlParser: true });
 var db = null;
 
 
+ //This are the elementes of the filter got it by id
+ //----------------elements for the filter by class
+var estadoClase;
+var claseEverything;
+var vibrators;
+var dildos;
+var anal;
+var lubricants;
+//----------------elements for the filter by sort
+var estadoSort;
+var bestSelling;
+var rating;
+var none;
+var lowerPrice
+var higherPrice;
+//----------------elements for the filter by brand
+var estadoBrand;
+var feelztoys;
+var liebe;
+var satisyer;
+var funFactory;
+var none;
+
+
+
+
 
 // This is for know when te conecction is ready, we only want to know once, thats te reason why
 // we use "once" on the event

@@ -18,6 +18,9 @@ $logoFont: 'Lobster';
     padding: 0;
     
 }
+body{
+    overflow: hidden;
+}
 
 li{
     list-style: none;
@@ -185,9 +188,11 @@ header{
     align-content: center;
     position: absolute;
     
+    
     .barraBusqueda{
         height: 30%;
         
+        margin-top: -35px;
         box-sizing: border-box;
         position: relative;
         
@@ -248,7 +253,7 @@ header{
         
         .filtros{
             
-            
+            margin-top: 10px;
             display: flex;
             width: 80%;
             margin-left: 10%;
@@ -258,6 +263,18 @@ header{
             
             align-content: center;
             justify-content: space-around;
+            
+            
+            .filtros_accion{
+                cursor: pointer;
+                transition: border-bottom 0.2s;
+            }
+            
+            .filtros_accion:hover{
+                border-bottom: 1px solid #CE817C;
+                color:  #CE817C;
+                
+            }
             
             .categoria{
                 display: flex;
@@ -338,6 +355,7 @@ header{
                     outline: none;
                     font-family: $primaryFont;
                     font-weight: 600;
+                    
                     
                     
                     .items{
@@ -470,10 +488,16 @@ header{
             box-sizing: border-box;
             display: flex;
             justify-content: center;
+            align-content: center;
+            justify-items: center;
+            margin-top: 10px;
             height: 100%;
+            
+            
             .catalogo{
                 
-                width: 80%;
+                width: 95%;
+                
                 box-sizing: border-box;
                 display: flex;
                 flex-flow: row wrap;
@@ -490,21 +514,44 @@ header{
                     flex-flow: column nowrap;
                     justify-content: space-around;
                     align-items: center;
-                    -webkit-box-shadow: 0px 0px 25px -21px rgba(0,0,0,0.82);
-                    -moz-box-shadow: 0px 0px 25px -21px rgba(0,0,0,0.82);
-                    box-shadow: 0px 0px 25px -21px rgba(0,0,0,0.82);
+                    -webkit-box-shadow: 5px 14px 31px -13px rgba(0,0,0,0.65);
+                    -moz-box-shadow: 5px 14px 31px -13px rgba(0,0,0,0.65);
+                    box-shadow: 5px 14px 31px -13px rgba(0,0,0,0.65);
                     margin-left: 2.5%;
                     margin-right: 2.5%;
-                    margin-top:  2.5%;
+                    margin-top:  3.5%;
                     margin-bottom: 2.5%;
-                    width: 20%;
-                    height: 65%;
+                    width: 250px;
+                    height: 350px;
+                    
+                    transition: height 0.5s;
                     box-sizing: border-box;
                     overflow: hidden;
-
+                    
                     p{
                         font-family: $openSans;
                         color:  rgba(237, 153, 142, 0.6) ;
+                    }
+                    
+                    
+                    .full_cuadro{
+                        height: 90%;
+                        
+                        display: flex;
+                        flex-flow: column nowrap;
+                        justify-content: space-between;
+                        align-items: center;
+                        
+                        .imagen_producto{
+                            
+                            margin-top: 40px;
+                            
+                        }
+                        
+                        .nombre_precio{
+                            
+                        }
+                        
                     }
                     
                     .botones{
@@ -517,18 +564,21 @@ header{
                         position: absolute;
                         top: 10px;
                         right: -3px;
-
+                        
                         .vector{
-
-                            margin: 4px;
                             
+                            margin: 4px;
+                            margin-top: 7px;
                             display: flex;
                             flex-flow: row nowrap;
                             justify-content: center;
                             align-content: center;
-
+                            width: 25px;
+                            height: 25px;
+                            cursor: pointer;
+                            
                         }
-
+                        
                         .corazon{
                             margin-top: 10px;
                         }
@@ -550,9 +600,8 @@ header{
                 
                 .itemVenta:hover{
                     
-                    -webkit-box-shadow: 0px 0px 36px -21px rgba(0,0,0,0.82);
-                    -moz-box-shadow: 0px 0px 36px -21px rgba(0,0,0,0.82);
-                    box-shadow: 0px 0px 36px -21px rgba(0,0,0,0.82);
+                    
+                    height: 400px;
                 }
                 
                 
@@ -565,8 +614,16 @@ header{
     .carga{
         
         height: 5%;
-        
+        margin-top: 45px;
         box-sizing: border-box;
+        background: rgba(249,112,88,1);
+        background: -moz-linear-gradient(left, rgba(249,112,88,1) 0%, rgba(244,173,159,0.8) 66%, rgba(245,192,178,0.7) 100%);
+        background: -webkit-gradient(left top, right top, color-stop(0%, rgba(249,112,88,1)), color-stop(66%, rgba(244,173,159,0.8)), color-stop(100%, rgba(245,192,178,0.7)));
+        background: -webkit-linear-gradient(left, rgba(249,112,88,1) 0%, rgba(244,173,159,0.8) 66%, rgba(245,192,178,0.7) 100%);
+        background: -o-linear-gradient(left, rgba(249,112,88,1) 0%, rgba(244,173,159,0.8) 66%, rgba(245,192,178,0.7) 100%);
+        background: -ms-linear-gradient(left, rgba(249,112,88,1) 0%, rgba(244,173,159,0.8) 66%, rgba(245,192,178,0.7) 100%);
+        background: linear-gradient(to right, rgba(249,112,88,1) 0%, rgba(244,173,159,0.8) 66%, rgba(245,192,178,0.7) 100%);
+        filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#f97058', endColorstr='#f5c0b2', GradientType=1 );
         
     }
     
@@ -579,6 +636,7 @@ header{
     color: #ED978C;
     font-size: 12pt;
     
+    
 }
 
 
@@ -586,6 +644,8 @@ header{
 .indicadores{
     color: rgba(237, 153, 142, 0.5);
 }
+
+
 
 
 

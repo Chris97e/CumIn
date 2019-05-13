@@ -6,6 +6,10 @@
   padding: 0;
 }
 
+body {
+  overflow: hidden;
+}
+
 li {
   list-style: none;
 }
@@ -216,6 +220,7 @@ header {
 
 .sostenedor .barraBusqueda {
   height: 30%;
+  margin-top: -35px;
   -webkit-box-sizing: border-box;
           box-sizing: border-box;
   position: relative;
@@ -266,6 +271,7 @@ header {
 }
 
 .sostenedor .barraBusqueda .filtros {
+  margin-top: 10px;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -279,6 +285,17 @@ header {
       align-content: center;
   -ms-flex-pack: distribute;
       justify-content: space-around;
+}
+
+.sostenedor .barraBusqueda .filtros .filtros_accion {
+  cursor: pointer;
+  -webkit-transition: border-bottom 0.2s;
+  transition: border-bottom 0.2s;
+}
+
+.sostenedor .barraBusqueda .filtros .filtros_accion:hover {
+  border-bottom: 1px solid #CE817C;
+  color: #CE817C;
 }
 
 .sostenedor .barraBusqueda .filtros .categoria {
@@ -454,11 +471,15 @@ header {
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
+  -ms-flex-line-pack: center;
+      align-content: center;
+  justify-items: center;
+  margin-top: 10px;
   height: 100%;
 }
 
 .sostenedor .productos .store .catalogo {
-  width: 80%;
+  width: 95%;
   -webkit-box-sizing: border-box;
           box-sizing: border-box;
   display: -webkit-box;
@@ -494,14 +515,16 @@ header {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
-  -webkit-box-shadow: 0px 0px 25px -21px rgba(0, 0, 0, 0.82);
-  box-shadow: 0px 0px 25px -21px rgba(0, 0, 0, 0.82);
+  -webkit-box-shadow: 5px 14px 31px -13px rgba(0, 0, 0, 0.65);
+  box-shadow: 5px 14px 31px -13px rgba(0, 0, 0, 0.65);
   margin-left: 2.5%;
   margin-right: 2.5%;
-  margin-top: 2.5%;
+  margin-top: 3.5%;
   margin-bottom: 2.5%;
-  width: 20%;
-  height: 65%;
+  width: 250px;
+  height: 350px;
+  -webkit-transition: height 0.5s;
+  transition: height 0.5s;
   -webkit-box-sizing: border-box;
           box-sizing: border-box;
   overflow: hidden;
@@ -510,6 +533,27 @@ header {
 .sostenedor .productos .store .catalogo .itemVenta p {
   font-family: "Open Sans";
   color: rgba(237, 153, 142, 0.6);
+}
+
+.sostenedor .productos .store .catalogo .itemVenta .full_cuadro {
+  height: 90%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-flow: column nowrap;
+          flex-flow: column nowrap;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.sostenedor .productos .store .catalogo .itemVenta .full_cuadro .imagen_producto {
+  margin-top: 40px;
 }
 
 .sostenedor .productos .store .catalogo .itemVenta .botones {
@@ -535,6 +579,7 @@ header {
 
 .sostenedor .productos .store .catalogo .itemVenta .botones .vector {
   margin: 4px;
+  margin-top: 7px;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -547,6 +592,9 @@ header {
           justify-content: center;
   -ms-flex-line-pack: center;
       align-content: center;
+  width: 25px;
+  height: 25px;
+  cursor: pointer;
 }
 
 .sostenedor .productos .store .catalogo .itemVenta .botones .corazon {
@@ -561,14 +609,19 @@ header {
 }
 
 .sostenedor .productos .store .catalogo .itemVenta:hover {
-  -webkit-box-shadow: 0px 0px 36px -21px rgba(0, 0, 0, 0.82);
-  box-shadow: 0px 0px 36px -21px rgba(0, 0, 0, 0.82);
+  height: 400px;
 }
 
 .sostenedor .carga {
   height: 5%;
+  margin-top: 45px;
   -webkit-box-sizing: border-box;
           box-sizing: border-box;
+  background: #f97058;
+  background: -webkit-gradient(left top, right top, color-stop(0%, #f97058), color-stop(66%, rgba(244, 173, 159, 0.8)), color-stop(100%, rgba(245, 192, 178, 0.7)));
+  background: -webkit-gradient(linear, left top, right top, from(#f97058), color-stop(66%, rgba(244, 173, 159, 0.8)), to(rgba(245, 192, 178, 0.7)));
+  background: linear-gradient(to right, #f97058 0%, rgba(244, 173, 159, 0.8) 66%, rgba(245, 192, 178, 0.7) 100%);
+  filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#f97058', endColorstr='#f5c0b2', GradientType=1 );
 }
 
 .tfiltros {
