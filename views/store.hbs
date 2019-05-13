@@ -131,17 +131,31 @@
         </nav>
     </header>
 
-    
+
 
     </div>
 
     <div class="sostenedor">
+
+         {{#if carga}}
         <div class="producto_detalle">
+            <div class="imagen_producto">
+                <img src="{{img}}" alt="">
 
-
+            </div>
+            <div class="informa">
+                <div class="detalles">
+                    <h1>{{name}}</h1>
+                </div>
+                <div class="caracteristica"></div>
+                <div class="comentario"></div>
+            </div>
+            <div class="botones"></div>
 
 
         </div>
+        {{/if}}
+
         <div class="barraBusqueda">
             <div class="espacio">
 
@@ -373,13 +387,15 @@
 
 
                         </div>
-                        <div class="full_cuadro" id="itemVentaSueno">
+                        <div class="full_cuadro"    >
+                            
+
                             <div class="imagen_producto">
                                 <img src="{{img}}" width="200px">
                             </div>
                             <div class="nombre_precio">
-                                <h1>{{name}}</h1>
-                                <p>${{price}}</p>
+                                <h1><a id="itemVentaSueno" href="/store/product/{{id}}" >{{name}}</a></h1>
+                                <p><a id="itemVentaSueno" href="/store/product/{{id}}" >${{price}}</a></p>
                             </div>
                         </div>
 
@@ -391,10 +407,11 @@
             </div>
         </div>
 
-
+       
         <div class="carga">
-
         </div>
+       
+
     </div>
 
 

@@ -226,6 +226,7 @@ header {
 }
 
 .sostenedor .producto_detalle {
+  cursor: pointer;
   margin-left: 5%;
   margin-top: 20px;
   display: -webkit-box;
@@ -248,7 +249,9 @@ header {
   height: 80vh;
   z-index: 100;
   border-radius: 20px;
-  border: 2px solid green;
+  background: white;
+  -webkit-box-shadow: 5px 14px 31px -13px rgba(0, 0, 0, 0.65);
+  box-shadow: 5px 14px 31px -13px rgba(0, 0, 0, 0.65);
 }
 
 .sostenedor .barraBusqueda {

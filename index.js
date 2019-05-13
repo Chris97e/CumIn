@@ -57,7 +57,7 @@ app.get('/', function (request, response) {
 
 app.get('/store/:type?', function (request, response) {
     
-    var collection;
+    var localCollection;
 
     var type = request.params.type;
     console.log(type);
@@ -81,24 +81,25 @@ app.get('/store/:type?', function (request, response) {
     }
     
     if (type == "Everything") {
-        console.log("perreo");
+        
         query = {};
         
     }
     
     //Accedemos a la conección
-    var collection = db.collection('products ');
+    var collection = db.collection('products');
     collection.find(query).toArray(function (err, docs) {
         assert.equal(err, null);
         
-        collection = docs;
+        localCollection = docs;
 
         var tipo = request.params.type;
-        tipo = tipo.toUpperCase();
+       // tipo = tipo.toUpperCase();
         
         var contexto = {
             products: docs,
-            type: tipo
+            type: tipo,
+            carga: false
             
         };
         
@@ -106,6 +107,26 @@ app.get('/store/:type?', function (request, response) {
         response.render('store', contexto);
     });
 });
+
+app.get('/store/product/:id', function(request, res){
+
+    console.log(+"......................................"+request.params.id);
+
+    var collection = db.collection('products');
+    collection.find({ id : request.params.id}).toArray(function (err, docs) {
+        assert.equal(err, null);
+        
+        var contexto = {
+            products: docs[0],
+            carga: true,
+            type: "everything"
+            
+        };
+        
+        res.render('store', contexto);
+    });
+});
+
 
 
 app.listen(3000, function () {

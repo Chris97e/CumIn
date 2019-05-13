@@ -16,6 +16,12 @@ window.onload = function () {
     var dineroDisplay = document.getElementById("dinero");
     var itemSort = document.getElementById("itemsSort");
     var itemBrand = document.getElementById("itemsBrand");
+    var elementoSelector = document.getElementById("itemVentaSueno");
+    
+    elementoSelector.addEventListener('click', function(){
+        localStorage.setItem("IP",window.location.href);
+        console.log("dddd");
+    });
     
     //-------------------------------------------------------Filtros
     //This are the elementes of the filter got it by id
