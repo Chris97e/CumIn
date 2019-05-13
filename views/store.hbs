@@ -6,11 +6,13 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>Store | CumIn</title>
-    <link rel="stylesheet" href="./css/header.css">
-    <link rel="stylesheet" href="./css/mainStore.css">
-    <script src="./js/barMenu.js"></script>
-    <script src="./js/searchBar.js"></script>
+    <link rel="stylesheet" href="/css/header.css">
+    <link rel="stylesheet" href="/css/mainStore.css">
+    <script src="/js/barMenu.js"></script>
+    <script src="/js/searchBar.js"></script>
+
 </head>
+
 
 <body>
     <header>
@@ -129,7 +131,17 @@
         </nav>
     </header>
 
+    
+
+    </div>
+
     <div class="sostenedor">
+        <div class="producto_detalle">
+
+
+
+
+        </div>
         <div class="barraBusqueda">
             <div class="espacio">
 
@@ -145,7 +157,7 @@
                     <div class="selector categoria">
 
                         <div class="boton">
-                            <p id="claseProducto" style="cursor: pointer">EVERYTHING</p>
+                            <p id="claseProducto" style="cursor: pointer">{{type}}</p>
                         </div>
 
                         <div class="flecha" style="cursor: pointer">
@@ -170,12 +182,15 @@
                         </div>
 
                         <div class="items" id="itemsClass">
-                            <p class="categorias"><a class="filtros_accion">Everything</a></p>
-                            <p class="categorias"><a class="filtros_accion">Vibrators</a></p>
-                            <p class="categorias"><a class="filtros_accion">Dildos</a></p>
-                            <p class="categorias"><a class="filtros_accion">Anal</a></p>
-                            <p class="categorias"><a class="filtros_accion">Nipples</a></p>
-                            <p class="categorias"><a class="filtros_accion">Lubricants</a></p>
+                            <p class="categorias"><a class="filtros_accion" href="/store/Everything"
+                                    id="Everything">Everything</a></p>
+                            <p class="categorias"><a class="filtros_accion" href="/store/Vibrators"
+                                    id="Vibrators">Vibrators</a></p>
+                            <p class="categorias"><a class="filtros_accion" href="/store/Dildos" id="Dildos">Dildos</a>
+                            </p>
+                            <p class="categorias"><a class="filtros_accion" href="/store/Anal" id="Anal">Anal</a></p>
+                            <p class="categorias"><a class="filtros_accion" href="/store/Lubricants"
+                                    id="Lubricants">Lubricants</a></p>
                         </div>
 
                     </div>
@@ -186,7 +201,7 @@
                     <p class="tfiltros btn" id="dineroProducto" style="cursor: pointer">LESS</p>
                     <p class="tfiltros btn" id="dinero">$60,000</p>
                     <p class="tfiltros indicadores" style=" margin-left: 10px">25,000</p>
-                    <input class="rango" type="range" name="" id="">
+                    <input class="rango" type="range" min="8" max="150" name="" id="rangePrice">
                     <p class="tfiltros indicadores">100,000</p>
 
                 </div>
@@ -217,11 +232,11 @@
 
                     <div class="selector">
                         <div class="items orden" id="itemsSort">
-                            <p class="categorias"><a class="filtros_accion">Best selling</a></p>
-                            <p class="categorias"><a class="filtros_accion">Rating</a></p>
-                            <p class="categorias"><a class="filtros_accion">None</a></p>
-                            <p class="categorias"><a class="filtros_accion">Lower price</a></p>
-                            <p class="categorias"><a class="filtros_accion">Higher price</a></p>
+                            <p class="categorias"><a class="filtros_accion" id="Best">Best selling</a></p>
+                            <p class="categorias"><a class="filtros_accion" id="Rating">Rating</a></p>
+                            <p class="categorias"><a class="filtros_accion" id="None">None</a></p>
+                            <p class="categorias"><a class="filtros_accion" id="Lower">Lower price</a></p>
+                            <p class="categorias"><a class="filtros_accion" id="Higher">Higher price</a></p>
                         </div>
                     </div>
 
@@ -252,11 +267,11 @@
 
                     <div class="selector">
                         <div class="items" id="itemsBrand">
-                            <p class="categorias"><a class="filtros_accion">Feelztoys</a></p>
-                            <p class="categorias"><a class="filtros_accion">Liebe</a></p>
-                            <p class="categorias"><a class="filtros_accion">Satisfyer</a></p>
-                            <p class="categorias"><a class="filtros_accion">Fun Factory</a></p>
-                            <p class="categorias"><a class="filtros_accion">None</a></p>
+                            <p class="categorias"><a class="filtros_accion" id="Feelztoys">Feelztoys</a></p>
+                            <p class="categorias"><a class="filtros_accion" id="Liebe">Liebe</a></p>
+                            <p class="categorias"><a class="filtros_accion" id="Satisfyer">Satisfyer</a></p>
+                            <p class="categorias"><a class="filtros_accion" id="Fun">Fun Factory</a></p>
+                            <p class="categorias"><a class="filtros_accion" id="NoneB">None</a></p>
                         </div>
                     </div>
 
@@ -358,7 +373,7 @@
 
 
                         </div>
-                        <div class="full_cuadro">
+                        <div class="full_cuadro" id="itemVentaSueno">
                             <div class="imagen_producto">
                                 <img src="{{img}}" width="200px">
                             </div>
@@ -378,7 +393,7 @@
 
 
         <div class="carga">
-           
+
         </div>
     </div>
 

@@ -1,9 +1,17 @@
 @import url("https://fonts.googleapis.com/css?family=Lobster");
 @import url("https://fonts.googleapis.com/css?family=Open+Sans:300,400,600,700");
 @import url("https://fonts.googleapis.com/css?family=Nunito+Sans:300,400,600,700,800,900");
+a {
+  text-decoration: none;
+  -webkit-text-emphasis: none;
+          text-emphasis: none;
+  color: none;
+}
+
 * {
   margin: 0;
   padding: 0;
+  color: #D89C93;
 }
 
 body {
@@ -208,14 +216,39 @@ header {
 .sostenedor {
   width: 100vw;
   height: 90vh;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-flow: column nowrap;
+          flex-flow: column nowrap;
   -webkit-box-sizing: border-box;
           box-sizing: border-box;
+  position: absolute;
+}
+
+.sostenedor .producto_detalle {
+  margin-left: 5%;
+  margin-top: 20px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-flow: column nowrap;
+          flex-flow: column nowrap;
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
   -ms-flex-line-pack: center;
       align-content: center;
-  position: absolute;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  position: fixed;
+  width: 90vw;
+  height: 80vh;
+  z-index: 100;
+  border-radius: 20px;
+  border: 2px solid green;
 }
 
 .sostenedor .barraBusqueda {
@@ -327,6 +360,8 @@ header {
 
 .sostenedor .barraBusqueda .filtros .categoria .selector .items {
   display: none;
+  -webkit-transition: display 1s;
+  transition: display 1s;
   -webkit-box-orient: horizontal;
   -webkit-box-direction: normal;
       -ms-flex-flow: row nowrap;
@@ -369,6 +404,8 @@ header {
 
 .sostenedor .barraBusqueda .filtros .ordenar .selector .items {
   display: none;
+  -webkit-transition: display 1s;
+  transition: display 1s;
   -webkit-box-orient: horizontal;
   -webkit-box-direction: normal;
       -ms-flex-flow: row nowrap;
@@ -411,6 +448,8 @@ header {
 
 .sostenedor .barraBusqueda .filtros .marca .selector .items {
   display: none;
+  -webkit-transition: display 1s;
+  transition: display 1s;
   -webkit-box-orient: horizontal;
   -webkit-box-direction: normal;
       -ms-flex-flow: row nowrap;

@@ -5,6 +5,7 @@ const MongoClient = require('mongodb').MongoClient;
 const assert = require('assert');
 var app = express();
 
+
 app.engine('hbs', engines.handlebars);
 app.set('views', './views');
 app.set('view engine', 'hbs');
@@ -25,33 +26,9 @@ const url = 'mongodb://localhost:27017';
 const dbName = 'cumIn';
 
 // Create a new MongoClient
-const client = new MongoClient(url,{useNewUrlParser: true });
+const client = new MongoClient(url, { useNewUrlParser: true });
 
 var db = null;
-
-
- //This are the elementes of the filter got it by id
- //----------------elements for the filter by class
-var estadoClase;
-var claseEverything;
-var vibrators;
-var dildos;
-var anal;
-var lubricants;
-//----------------elements for the filter by sort
-var estadoSort;
-var bestSelling;
-var rating;
-var none;
-var lowerPrice
-var higherPrice;
-//----------------elements for the filter by brand
-var estadoBrand;
-var feelztoys;
-var liebe;
-var satisyer;
-var funFactory;
-var none;
 
 
 
@@ -78,17 +55,50 @@ app.get('/', function (request, response) {
     response.render('home');
 });
 
-app.get('/store', function (request, response) {
+app.get('/store/:type?', function (request, response) {
+    
+    var collection;
+
+    var type = request.params.type;
+    console.log(type);
+    
+    if (request.query.price) {
+        query.price = { $lte: request.query.price };
+    }
+    
     
     var query = {};
+    
+    
+    
+    if (request.params.type) {
+        
+        query.type = request.params.type;
+        
+        
+        
+        
+    }
+    
+    if (type == "Everything") {
+        console.log("perreo");
+        query = {};
+        
+    }
     
     //Accedemos a la conección
     var collection = db.collection('products ');
     collection.find(query).toArray(function (err, docs) {
         assert.equal(err, null);
         
+        collection = docs;
+
+        var tipo = request.params.type;
+        tipo = tipo.toUpperCase();
+        
         var contexto = {
-            products : docs,
+            products: docs,
+            type: tipo
             
         };
         
@@ -101,3 +111,23 @@ app.get('/store', function (request, response) {
 app.listen(3000, function () {
     console.log('Aplicación ejemplo, escuchando el puerto 3000!');
 });
+
+function compare(a, b) {
+    
+    if (a < b) {
+        return -1;
+    }
+    
+    if (a > b) {
+        return 1;
+    }
+
+    return 0;
+}
+
+
+
+
+
+
+

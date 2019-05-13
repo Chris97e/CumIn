@@ -13,9 +13,17 @@ $primaryFont: 'Nunito Sans';
 $openSans: 'Open Sans';
 $logoFont: 'Lobster';
 
+a{
+    text-decoration: none;
+    text-emphasis: none;
+    color: none;
+    
+}
+
 *{
     margin: 0;
     padding: 0;
+    color: #D89C93;
     
 }
 body{
@@ -183,11 +191,29 @@ header{
 .sostenedor{
     width: 100vw;   
     height: 90vh;   
+    
+    flex-flow: column nowrap;
     box-sizing: border-box;
-    justify-content: center;
-    align-content: center;
+    
     position: absolute;
     
+    .producto_detalle{
+        
+        margin-left: 5%;
+        margin-top: 20px;
+        display: flex;
+        flex-flow: column nowrap;
+        justify-content: center;
+        align-content: center;
+        align-items: center;
+        position: fixed;
+        width: 90vw;
+        height: 80vh;
+        z-index: 100;
+        border-radius: 20px;
+        border: 2px solid green;
+        
+    }
     
     .barraBusqueda{
         height: 30%;
@@ -305,6 +331,7 @@ header{
                     .items{
                         // listo tipos de categorias
                         display: none;
+                        transition: display 1s;
                         flex-flow: row nowrap;
                         position: absolute;
                         margin-top: 30px;
@@ -358,9 +385,12 @@ header{
                     
                     
                     
+                    
+                    
                     .items{
                         // listo ordenamineto de categorias
                         display: none;
+                        transition: display 1s;
                         flex-flow: row nowrap;
                         position: absolute;
                         margin-top: 30px;
@@ -411,6 +441,7 @@ header{
                     .items{
                         // listo clasificación por marcas
                         display: none;
+                        transition: display 1s;
                         flex-flow: row nowrap;
                         position: absolute;
                         margin-top: 30px;
@@ -638,6 +669,8 @@ header{
     
     
 }
+
+
 
 
 
