@@ -12,6 +12,7 @@ $logoFont: 'Lobster';
 
 body {
     overflow-x: hidden;
+    
 }
 * {
     margin: 0;
@@ -107,6 +108,7 @@ body {
     flex-flow: column nowrap;
     
     justify-content: center;
+    justify-items: center;
 
 
     .transitor {
