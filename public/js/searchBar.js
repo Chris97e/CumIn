@@ -5,16 +5,50 @@ window.onload = function () {
     var boolPrice = false;
     var boolSort = false;
     var boolBrand = false;
+
+
+    var cerrar ;
+    var mas;
+    var anadirFavoritos;
+
+
+
+    var creadoType = "false";
+    if (localStorage.getItem("creadoTipo")) {
+        creadoType = localStorage.getItem("creadoTipo");
+    }
+
+    var creadoPrice = "false";
+    if (localStorage.getItem("creadoPrice")) {
+        creadoPrice = localStorage.getItem("creadoPrice");
+    }
+
+    var creadoSort = "false";
+    if (localStorage.getItem("creadoSort")) {
+        creadoSort = localStorage.getItem("creadoSort");
+    }
+
+    var creadoBrand = "false";
+    if (localStorage.getItem("creadoBrand")) {
+        creadoBrand = localStorage.getItem("creadoBrand");
+    }
+
+
     var tipo = "";
     if (localStorage.getItem("tipo")) {
         tipo = localStorage.getItem("tipo");
     }
+
     var sort = "";
     if (localStorage.getItem("sort")) {
         sort = localStorage.getItem("sort");
+
     }
 
     var brand = "";
+    if (localStorage.getItem("brand")) {
+        brand = localStorage.getItem("brand");
+    }
 
     var typeProduct = document.getElementById("claseProducto");
     var priceType = document.getElementById("dineroProducto");
@@ -40,6 +74,9 @@ window.onload = function () {
 
     //----------------elements for the filter by sort
     var estadoSort = document.getElementById("sortProducto");
+    if (localStorage.getItem(estadoSort)) {
+        estadoSort.innerHTML = localStorage.getItem(estadoSort);
+    }
     var bestSelling = document.getElementById("Best");
     var rating = document.getElementById("Rating");
     var none = document.getElementById("None");
@@ -164,17 +201,18 @@ window.onload = function () {
     function filtrarTipos(a, b) {
 
 
-        
+        var estoyCambiando = false;
         var url = window.location.href;
         var existe = url.search('type');
 
 
 
         if (existe > 0) {
-            
+
             estoyCambiando = true;
             var cambio = url.replace(b, a);
             localStorage.setItem("tipo", a);
+            localStorage.setItem("creadoTipo", true);
 
             location.href = cambio;
 
@@ -182,26 +220,33 @@ window.onload = function () {
         }
 
         if (url.length == 28) {
+            estoyCambiando = true;
             localStorage.setItem("tipo", a);
+            localStorage.setItem("creadoTipo", true);
             location.href = url + 'type=' + a;
 
 
-        } 
+        }
 
         if (url.length == 27) {
+            estoyCambiando = true;
             localStorage.setItem("tipo", a);
+            localStorage.setItem("creadoTipo", true);
             location.href = url + '/type=' + a;
 
-
-        } 
-        
-
-        if (){
 
         }
 
 
-        tipo = a;
+        if ((creadoBrand == "true" || creadoSort == "true" || creadoBrand == "true") && estoyCambiando == false) {
+            localStorage.setItem("tipo", a);
+            localStorage.setItem("creadoTipo", true);
+            location.href = url + '&type=' + a;
+
+        }
+
+
+
 
 
 
@@ -274,37 +319,52 @@ window.onload = function () {
 
     function filtrarSort(a, b) {
 
-
-
+        var estoyCambiando = false;
         var url = window.location.href;
         var existe = url.search('sort');
 
 
 
         if (existe > 0) {
+
+            estoyCambiando = true;
+
+
             var cambio = url.replace(b, a);
             localStorage.setItem("sort", a);
+            localStorage.setItem("creadoSort", true);
 
             location.href = cambio;
 
         }
 
         if (url.length == 28) {
+            estoyCambiando = true;
             localStorage.setItem("sort", a);
+            localStorage.setItem("creadoSort", true);
             location.href = url + 'sort=' + a;
 
-        } 
+        }
 
 
         if (url.length == 27) {
+            estoyCambiando = true;
             localStorage.setItem("sort", a);
+            localStorage.setItem("creadoSort", true);
             location.href = url + '/sort=' + a;
 
-        } 
+        }
+
+
+        if ((creadoBrand == "true" || creadoType == "true" || creadoPrice == "true") && estoyCambiando == false) {
+            localStorage.setItem("sort", a);
+            localStorage.setItem("creadoSort", true);
+            location.href = url + '&sort=' + a;
+
+        }
 
 
 
-        
 
 
 
@@ -313,59 +373,128 @@ window.onload = function () {
     //--------------------------------------------------------
 
     bestSelling.addEventListener('click', function () {
-        estadoSort.innerHTML = "BEST SELLING";
+
+        localStorage.setItem(estadoSort, "BEST SELLING");
         filtrarSort("best", sort);
         ocultarTodo();
     });
 
     rating.addEventListener('click', function () {
-        estadoSort.innerHTML = "RAITING";
+        localStorage.setItem(estadoSort, "RAITING");
         filtrarSort("raiting", sort);
         ocultarTodo();
     });
 
     none.addEventListener('click', function () {
-        estadoSort.innerHTML = "NONE";
+        localStorage.setItem(estadoSort, "NONE");
         filtrarSort("nones", sort);
         ocultarTodo();
     });
 
     lowerPrice.addEventListener('click', function () {
-        estadoSort.innerHTML = "LOWER PRICE";
+
+        localStorage.setItem(estadoSort, "LOWER PRICE");
         filtrarSort("lower", sort);
         ocultarTodo();
     });
 
     higherPrice.addEventListener('click', function () {
-        estadoSort.innerHTML = "HIGHER PRICE";
+
+        localStorage.setItem(estadoSort, "HIGHER PRICE");
         filtrarSort("higher", sort);
         ocultarTodo();
     });
 
     //----------------elements for the filter by brand
 
+
+    function filtrarBrand(a, b) {
+
+
+        var estoyCambiando = false;
+        var url = window.location.href;
+        var existe = url.search('brand');
+
+
+
+        if (existe > 0) {
+            estoyCambiando = true;
+            var cambio = url.replace(b, a);
+            localStorage.setItem("brand", a);
+            localStorage.setItem("creadoBrand", true);
+
+            location.href = cambio;
+
+        }
+
+        if (url.length == 28) {
+            estoyCambiando = true;
+            localStorage.setItem("brand", a);
+            localStorage.setItem("creadoBrand", true);
+            location.href = url + 'brand=' + a;
+
+        }
+
+
+        if (url.length == 27) {
+            estoyCambiando = true;
+            localStorage.setItem("brand", a);
+            localStorage.setItem("creadoBrand", true);
+            location.href = url + '/brand=' + a;
+
+        }
+
+
+
+        if ((creadoBrand == "true" || creadoType == "true" || creadoSort == "true") && estoyCambiando == false) {
+            console.log("Salchicon cervecero");
+            localStorage.setItem("brand", a);
+            localStorage.setItem("creadoBrand", true);
+            location.href = url + '&brand=' + a;
+
+        }
+
+
+
+
+
+
+
+    }
+
+
+
+
+
+    //----------------------------------------------------
+
     feelztoys.addEventListener('click', function () {
         estadoBrand.innerHTML = "FEELZTOYS";
+        filtrarBrand("Feelztoys", brand);
         ocultarTodo();
     });
 
     liebe.addEventListener('click', function () {
         estadoBrand.innerHTML = "LIEBE";
+        filtrarBrand("Liebe", brand);
         ocultarTodo();
     });
 
     satisyer.addEventListener('click', function () {
         estadoBrand.innerHTML = "SATISFYER";
+        filtrarBrand("Satisfyer", brand);
         ocultarTodo();
     });
 
     funFactory.addEventListener('click', function () {
         estadoBrand.innerHTML = "FUN FACTORY";
+        filtrarBrand("Fun", brand);
         ocultarTodo();
     });
 
     none.addEventListener('click', function () {
         estadoBrand.innerHTML = "NONE";
+        filtrarBrand("none", brand);
         ocultarTodo();
     });
 

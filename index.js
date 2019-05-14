@@ -58,13 +58,86 @@ app.get('/', function (request, response) {
 app.get('/store/:filtro?', function (request, response) {
 
 
-    let tiposFiltros = request.params.filtro;
-    let filtros =  tiposFiltros.split('&');
-
     var query = {}
+    var tipo;
+    var sort;
+
+    if (request.params.filtro) {
+        let tiposFiltros = request.params.filtro;
+        let filtros = tiposFiltros.split('&');
+
+        filtros.forEach(f => {
+            let i = f.split("=");
+
+            if (i[0] == "type") {
+
+                 
+
+                if (i[1] == "Everything") {
+
+                    for (var k = 0; k < query.length; k++) {
+                        if (query[k].type === "Everything") {
+                            arr.splice(k, 1);
+                        }
+                    }
+
+
+                } else {
+                    query.type = i[1];
+                }
+
+
+            }
+
+
+            if (i[0] == "sort") {
+                
+                //query.sort = i[1];
+
+            }
+
+
+            if (i[0] == "brand") {
+
+                if(i[1] == "Fun"){
+                    i[1] = "Fun Factory";
+                }
+
+                if (i[1] == "none") { 
+
+                    
+
+                    for (var k = 0; k < query.length; k++) {
+                        if (query[k].brand === "none") {
+                            arr.splice(k, 1);
+                        }
+                    }
+
+
+
+                    
+                } else  {
+                    query.brand = i[1];
+                }
+
+
+
+
+            }
+
+
+        });
+
+        console.log(query);
+
+
+    }
+
+
+
     var coleccionSort;
 
-    
+
 
 
 
@@ -92,10 +165,10 @@ app.get('/store/:filtro?', function (request, response) {
 
             if (peticionDividida[0] == "sort") {
 
-                
+
 
                 if (peticionDividida[1] == "best") {
-                    console.log("-------------------------");
+                    
                     coleccionSort.sort(function (a, b) {
                         if (a.sells > b.sells) {
                             return -1;
@@ -165,11 +238,12 @@ app.get('/store/:filtro?', function (request, response) {
 
 
 
-        var tipo = request.params.type;
+        
         var contexto = {
             products: coleccionSort,
-            type: tipo,
-            carga: false
+            
+            carga: false,
+            
 
         };
 
