@@ -22,6 +22,10 @@ li {
   list-style: none;
 }
 
+#mariposa {
+  cursor: pointer;
+}
+
 input[type=range] {
   height: 0px;
   -webkit-appearance: none;
@@ -269,7 +273,6 @@ header {
 }
 
 .sostenedor .producto_detalle .informa {
-  margin-left: -100px;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -394,10 +397,10 @@ header {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
-  z-index: 400000;
 }
 
 .sostenedor .producto_detalle .informa .caja_informa .comentario .sostenedor_comentario {
+  z-index: -1;
   -webkit-box-sizing: border-box;
           box-sizing: border-box;
   position: relative;

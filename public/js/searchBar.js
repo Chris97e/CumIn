@@ -7,9 +7,9 @@ window.onload = function () {
     var boolBrand = false;
 
 
-    var cerrar ;
-    var mas;
-    var anadirFavoritos;
+    var cerrar = document.getElementById("mariposa");
+    var mas = document.getElementById("masCarrito");
+    var anadirFavoritos = document.getElementById("favoritos");;
 
 
 
@@ -60,6 +60,22 @@ window.onload = function () {
     var itemSort = document.getElementById("itemsSort");
     var itemBrand = document.getElementById("itemsBrand");
     var elementoSelector = document.getElementById("itemVentaSueno");
+
+
+
+
+    //----------------detalles productos
+
+
+
+
+   
+
+
+
+
+
+    //------------------------fin detalles productos
 
 
     //-------------------------------------------------------Filtros
@@ -213,7 +229,7 @@ window.onload = function () {
             var cambio = url.replace(b, a);
             localStorage.setItem("tipo", a);
             localStorage.setItem("creadoTipo", true);
-
+            localStorage.setItem("ip", cambio);
             location.href = cambio;
 
 
@@ -223,6 +239,7 @@ window.onload = function () {
             estoyCambiando = true;
             localStorage.setItem("tipo", a);
             localStorage.setItem("creadoTipo", true);
+            localStorage.setItem("ip", url + 'type=' + a);
             location.href = url + 'type=' + a;
 
 
@@ -232,6 +249,7 @@ window.onload = function () {
             estoyCambiando = true;
             localStorage.setItem("tipo", a);
             localStorage.setItem("creadoTipo", true);
+            localStorage.setItem("ip", url + '/type=' + a);
             location.href = url + '/type=' + a;
 
 
@@ -241,6 +259,7 @@ window.onload = function () {
         if ((creadoBrand == "true" || creadoSort == "true" || creadoBrand == "true") && estoyCambiando == false) {
             localStorage.setItem("tipo", a);
             localStorage.setItem("creadoTipo", true);
+            localStorage.setItem("ip", url + '&type=' + a);
             location.href = url + '&type=' + a;
 
         }
@@ -325,6 +344,7 @@ window.onload = function () {
 
 
 
+
         if (existe > 0) {
 
             estoyCambiando = true;
@@ -333,7 +353,7 @@ window.onload = function () {
             var cambio = url.replace(b, a);
             localStorage.setItem("sort", a);
             localStorage.setItem("creadoSort", true);
-
+            localStorage.setItem("ip", cambio);
             location.href = cambio;
 
         }
@@ -342,6 +362,7 @@ window.onload = function () {
             estoyCambiando = true;
             localStorage.setItem("sort", a);
             localStorage.setItem("creadoSort", true);
+            localStorage.setItem("ip", url + 'sort=' + a);
             location.href = url + 'sort=' + a;
 
         }
@@ -351,6 +372,7 @@ window.onload = function () {
             estoyCambiando = true;
             localStorage.setItem("sort", a);
             localStorage.setItem("creadoSort", true);
+            localStorage.setItem("ip", url + '/sort=' + a);
             location.href = url + '/sort=' + a;
 
         }
@@ -359,6 +381,7 @@ window.onload = function () {
         if ((creadoBrand == "true" || creadoType == "true" || creadoPrice == "true") && estoyCambiando == false) {
             localStorage.setItem("sort", a);
             localStorage.setItem("creadoSort", true);
+            localStorage.setItem("ip", url + '&sort=' + a);
             location.href = url + '&sort=' + a;
 
         }
@@ -405,6 +428,8 @@ window.onload = function () {
         ocultarTodo();
     });
 
+
+
     //----------------elements for the filter by brand
 
 
@@ -422,7 +447,7 @@ window.onload = function () {
             var cambio = url.replace(b, a);
             localStorage.setItem("brand", a);
             localStorage.setItem("creadoBrand", true);
-
+            localStorage.setItem("ip", cambio);
             location.href = cambio;
 
         }
@@ -432,6 +457,7 @@ window.onload = function () {
             localStorage.setItem("brand", a);
             localStorage.setItem("creadoBrand", true);
             location.href = url + 'brand=' + a;
+            localStorage.setItem("ip", url + 'brand=' + a);
 
         }
 
@@ -441,7 +467,7 @@ window.onload = function () {
             localStorage.setItem("brand", a);
             localStorage.setItem("creadoBrand", true);
             location.href = url + '/brand=' + a;
-
+            localStorage.setItem("ip", url + '/brand=' + a);
         }
 
 
@@ -451,6 +477,7 @@ window.onload = function () {
             localStorage.setItem("brand", a);
             localStorage.setItem("creadoBrand", true);
             location.href = url + '&brand=' + a;
+            localStorage.setItem("ip", url + '&brand=' + a);
 
         }
 
@@ -498,6 +525,9 @@ window.onload = function () {
         ocultarTodo();
     });
 
+    cerrar.addEventListener('click', function () {
+        location.href = localStorage.getItem("ip");
+    });
 
 
 
