@@ -1,6 +1,6 @@
 var express = require('express'),
-engines = require('consolidate'),
-handlebars = require('handlebars');
+    engines = require('consolidate'),
+    handlebars = require('handlebars');
 const MongoClient = require('mongodb').MongoClient;
 const assert = require('assert');
 var app = express();
@@ -40,7 +40,7 @@ var db = null;
 
 client.connect(function (err) {
     assert.equal(null, err);
-    
+
     db = client.db(dbName);
     console.log("Conecction has been made!");
     //client.close();
@@ -55,74 +55,156 @@ app.get('/', function (request, response) {
     response.render('home');
 });
 
-app.get('/store/:type?', function (request, response) {
-    
-    var localCollection;
+app.get('/store/:filtro?', function (request, response) {
 
-    var type = request.params.type;
-    console.log(type);
+
+    let tiposFiltros = request.params.filtro;
+    let filtros =  tiposFiltros.split('&');
+
+    var query = {}
+    var coleccionSort;
+
     
-    if (request.query.price) {
-        query.price = { $lte: request.query.price };
-    }
-    
-    
-    var query = {};
-    
-    
-    
-    if (request.params.type) {
-        
-        query.type = request.params.type;
-        
-        
-        
-        
-    }
-    
-    if (type == "Everything") {
-        
-        query = {};
-        
-    }
-    
+
+
+
+    //console.log("---------------");
+    // console.log(query);
+
+
+
     //Accedemos a la conección
     var collection = db.collection('products');
     collection.find(query).toArray(function (err, docs) {
         assert.equal(err, null);
-        
-        localCollection = docs;
+
+        coleccionSort = docs;
+
+
+
+        ////
+        if (request.params.filtro) {
+            var peticionFiltro = request.params.filtro;
+            var peticionDividida = peticionFiltro.split("=");
+
+
+
+
+            if (peticionDividida[0] == "sort") {
+
+                
+
+                if (peticionDividida[1] == "best") {
+                    console.log("-------------------------");
+                    coleccionSort.sort(function (a, b) {
+                        if (a.sells > b.sells) {
+                            return -1;
+                        }
+                        if (a.sells < b.sells) {
+                            return 1;
+                        }
+                        // a must be equal to b
+                        return 0;
+
+                    });
+                }
+            }
+
+            if (peticionDividida[0] == "brand") {
+
+                coleccionSort.sort(function (a, b) {
+                    if (a.brand > b.brand) {
+                        return 1;
+                    }
+                    if (a.brand < b.brand) {
+                        return -1;
+                    }
+                    // a must be equal to b
+                    return 0;
+
+                });
+
+            }
+
+            if (peticionDividida[0] == "lower") {
+
+                coleccionSort.sort(function (a, b) {
+                    if (a.price > b.price) {
+                        return 1;
+                    }
+                    if (a.price < b.price) {
+                        return -1;
+                    }
+                    // a must be equal to b
+                    return 0;
+
+                });
+
+            }
+
+            if (peticionDividida[0] == "higher") {
+
+                coleccionSort.sort(function (a, b) {
+                    if (a.price > b.price) {
+                        return -1;
+                    }
+                    if (a.price < b.price) {
+                        return 1;
+                    }
+                    // a must be equal to b
+                    return 0;
+
+                });
+
+            }
+
+
+        }
+
+        ////
+
+
 
         var tipo = request.params.type;
-       // tipo = tipo.toUpperCase();
-        
         var contexto = {
-            products: docs,
+            products: coleccionSort,
             type: tipo,
             carga: false
-            
+
         };
-        
-        
+
+
         response.render('store', contexto);
     });
 });
 
-app.get('/store/product/:id', function(request, res){
+app.get('/store/product/:name', function (request, res) {
 
-    console.log(+"......................................"+request.params.id);
+
+    var index = {};
+
+
+
+    if (request.params.name) {
+
+        index.name = request.params.name;
+    }
+
+
 
     var collection = db.collection('products');
-    collection.find({ id : request.params.id}).toArray(function (err, docs) {
+    collection.find(index).toArray(function (err, docs) {
         assert.equal(err, null);
-        
+
         var contexto = {
             products: docs[0],
             carga: true,
             type: "everything"
-            
+
         };
-        
+
+
+
         res.render('store', contexto);
     });
 });
@@ -134,11 +216,11 @@ app.listen(3000, function () {
 });
 
 function compare(a, b) {
-    
+
     if (a < b) {
         return -1;
     }
-    
+
     if (a > b) {
         return 1;
     }

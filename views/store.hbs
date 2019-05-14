@@ -137,23 +137,163 @@
 
     <div class="sostenedor">
 
-         {{#if carga}}
+        {{#if carga}}
+
         <div class="producto_detalle">
+
             <div class="imagen_producto">
-                <img src="{{img}}" alt="">
+                <img src="{{products.img}}" alt="">
 
             </div>
             <div class="informa">
-                <div class="detalles">
-                    <h1>{{name}}</h1>
+                <div class="caja_informa">
+
+                    <div class="detalles">
+                        <h1>{{products.name}}</h1>
+                        <p class="precio">PRECIO: ${{products.price}}</p>
+                        <p class="description">{{products.description}}</p>
+                    </div>
+                    <div class="caracteristica">
+                        <p> <strong> Tipo: </strong> {{products.type}} </p>
+                        <p> <strong> Materiales: </strong> {{products.materiales}} </p>
+                        <p> <strong> Alto: </strong> {{products.alto}} CM </p>
+                        <p> <strong> Ancho: </strong> {{products.ancho}} CM </p>
+                        <p> <strong> Diametro: </strong> {{products.diametro}} CM </p>
+                        <p> <strong> Insertable: </strong> {{products.insertable}} CM </p>
+                        <p> <strong> Marca: </strong> {{products.brand}} </p>
+
+
+
+                    </div>
+
+                    <h2>COMENTARIOS:</h2>
+                    <div class="comentario">
+
+                        {{#each products.comentarios}}
+                        <div class="sostenedor_comentario">
+                            <div class="persona">
+                                <div class="nombre">{{user}}</div>
+                                <div class="fecha">{{date}}</div>
+                                <div class="rating"> Calificación: {{rate}}</div>
+                            </div>
+
+                            <div class="persona_comentario">
+                                {{comentario}}
+                            </div>
+                        </div>
+                        {{/each}}
+                    </div>
+
                 </div>
-                <div class="caracteristica"></div>
-                <div class="comentario"></div>
+
+
             </div>
-            <div class="botones"></div>
+            <div class="botones">
 
+                <div class="cerrar">
+                    <!-- Generator: Adobe Illustrator 23.0.3, SVG Export Plug-In  -->
+                    <svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"
+                        x="0px" y="0px" width="20.02px" height="20.02px" viewBox="0 0 20.02 20.02"
+                        style="enable-background:new 0 0 20.02 20.02;" xml:space="preserve">
+                        <style type="text/css">
+                            .st0 {
+                                opacity: 0.5;
+                                fill: url(#SVGID_1_);
+                            }
 
+                            .st1 {
+                                opacity: 0.5;
+                                fill: url(#SVGID_2_);
+                            }
+                        </style>
+                        <defs>
+                        </defs>
+                        <linearGradient id="SVGID_1_" gradientUnits="userSpaceOnUse" x1="-2.5126" y1="80.2087"
+                            x2="22.5303" y2="80.2087"
+                            gradientTransform="matrix(-0.7071 -0.7071 0.7071 -0.7071 -39.6299 73.8023)">
+                            <stop offset="0" style="stop-color:#F5C0B3;stop-opacity:0.7" />
+                            <stop offset="0.2804" style="stop-color:#F6A796;stop-opacity:0.7841" />
+                            <stop offset="0.7575" style="stop-color:#F8816B;stop-opacity:0.9273" />
+                            <stop offset="1" style="stop-color:#F9725A" />
+                        </linearGradient>
+                        <polygon class="st0" points="0,2.31 7.7,10.01 0,17.71 2.31,20.02 10.01,12.32 17.71,20.02 20.02,17.71 12.32,10.01 20.02,2.31 
+	17.71,0 10.01,7.7 2.31,0 " />
+                    </svg>
+
+                </div>
+
+                <div class="mas">
+                    <!-- Generator: Adobe Illustrator 23.0.3, SVG Export Plug-In  -->
+                    <svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"
+                        x="0px" y="0px" width="22px" height="22px" viewBox="0 0 22 22"
+                        style="enable-background:new 0 0 22 22;" xml:space="preserve">
+                        <style type="text/css">
+                            .st0 {
+                                opacity: 0.5;
+                                fill: url(#SVGID_1_);
+                            }
+
+                            .st1 {
+                                opacity: 0.5;
+                                fill: url(#SVGID_2_);
+                            }
+                        </style>
+                        <defs>
+                        </defs>
+                        <linearGradient id="SVGID_1_" gradientUnits="userSpaceOnUse" x1="0" y1="14.3235" x2="22"
+                            y2="14.3235" gradientTransform="matrix(-1 0 0 -1 22 25.3235)">
+                            <stop offset="0" style="stop-color:#F5C0B3;stop-opacity:0.7" />
+                            <stop offset="0.2804" style="stop-color:#F6A796;stop-opacity:0.7841" />
+                            <stop offset="0.7575" style="stop-color:#F8816B;stop-opacity:0.9273" />
+                            <stop offset="1" style="stop-color:#F9725A" />
+                        </linearGradient>
+                        <polygon class="st0" points="0,12.43 9.57,12.43 9.57,22 12.43,22 12.43,12.43 22,12.43 22,9.57 12.43,9.57 12.43,0 9.57,0 
+	9.57,9.57 0,9.57 " />
+                    </svg>
+
+                </div>
+
+                <div class="heart">
+                    <!-- Generator: Adobe Illustrator 23.0.3, SVG Export Plug-In  -->
+                    <svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"
+                        x="0px" y="0px" width="29px" height="25.91px" viewBox="0 0 29 25.91"
+                        style="enable-background:new 0 0 29 25.91;" xml:space="preserve">
+                        <style type="text/css">
+                            .st0 {
+                                opacity: 0.5;
+                                fill: url(#SVGID_1_);
+                            }
+
+                            .st1 {
+                                opacity: 0.5;
+                                fill: url(#SVGID_2_);
+                            }
+                        </style>
+                        <defs>
+                        </defs>
+                        <linearGradient id="SVGID_1_" gradientUnits="userSpaceOnUse" x1="29" y1="12.9556" x2="0"
+                            y2="12.9556">
+                            <stop offset="0" style="stop-color:#F5C0B3;stop-opacity:0.7" />
+                            <stop offset="0.2804" style="stop-color:#F6A796;stop-opacity:0.7841" />
+                            <stop offset="0.7575" style="stop-color:#F8816B;stop-opacity:0.9273" />
+                            <stop offset="1" style="stop-color:#F9725A" />
+                        </linearGradient>
+                        <path class="st0" d="M26.65,2.6C25.1,0.92,22.98,0,20.68,0c-1.73,0-3.31,0.55-4.71,1.62c-0.53,0.41-1.02,0.89-1.47,1.44
+	c-0.45-0.54-0.94-1.03-1.47-1.44C11.63,0.55,10.05,0,8.32,0C6.02,0,3.9,0.92,2.35,2.6C0.84,4.25,0,6.49,0,8.92
+	c0,2.49,0.92,4.76,2.89,7.14c1.73,2.08,4.18,4.17,7.08,6.64c0.95,0.81,2.01,1.72,3.12,2.68c0.39,0.34,0.89,0.53,1.41,0.53
+	s1.02-0.19,1.41-0.53c1.13-0.99,2.22-1.92,3.21-2.76c2.83-2.41,5.27-4.49,6.99-6.57C28.08,13.68,29,11.41,29,8.92
+	C29,6.49,28.16,4.25,26.65,2.6z M20.68,2.64c1.56,0,2.99,0.62,4.03,1.75c1.07,1.16,1.65,2.76,1.65,4.53c0,1.87-0.7,3.55-2.28,5.46
+	c-1.58,1.9-3.95,3.92-6.69,6.26c-0.88,0.75-1.86,1.58-2.89,2.47c-1.02-0.89-2-1.73-2.88-2.47c-2.74-2.34-5.11-4.36-6.69-6.26
+	c-1.58-1.91-2.28-3.59-2.28-5.46c0-1.76,0.59-3.37,1.65-4.53c1.04-1.13,2.47-1.75,4.03-1.75c1.13,0,2.17,0.36,3.09,1.07
+	c0.84,0.65,1.42,1.47,1.77,2.05c0.28,0.47,0.77,0.75,1.32,0.75s1.04-0.28,1.32-0.75c0.34-0.58,0.93-1.4,1.77-2.05
+	C18.51,3,19.55,2.64,20.68,2.64z" />
+                    </svg>
+
+                </div>
+
+            </div>
         </div>
+
         {{/if}}
 
         <div class="barraBusqueda">
@@ -196,15 +336,11 @@
                         </div>
 
                         <div class="items" id="itemsClass">
-                            <p class="categorias"><a class="filtros_accion" href="/store/Everything"
-                                    id="Everything">Everything</a></p>
-                            <p class="categorias"><a class="filtros_accion" href="/store/Vibrators"
-                                    id="Vibrators">Vibrators</a></p>
-                            <p class="categorias"><a class="filtros_accion" href="/store/Dildos" id="Dildos">Dildos</a>
-                            </p>
-                            <p class="categorias"><a class="filtros_accion" href="/store/Anal" id="Anal">Anal</a></p>
-                            <p class="categorias"><a class="filtros_accion" href="/store/Lubricants"
-                                    id="Lubricants">Lubricants</a></p>
+                            <p class="categorias"><a class="filtros_accion" id="Everything">Everything</a></p>
+                            <p class="categorias"><a class="filtros_accion" id="Vibrators">Vibrators</a></p>
+                            <p class="categorias"><a class="filtros_accion" id="Dildos">Dildos</a></p>
+                            <p class="categorias"><a class="filtros_accion" id="Anal">Anal</a></p>
+                            <p class="categorias"><a class="filtros_accion" id="Lubricants">Lubricants</a></p>
                         </div>
 
                     </div>
@@ -387,15 +523,15 @@
 
 
                         </div>
-                        <div class="full_cuadro"    >
-                            
+                        <div class="full_cuadro">
+
 
                             <div class="imagen_producto">
                                 <img src="{{img}}" width="200px">
                             </div>
                             <div class="nombre_precio">
-                                <h1><a id="itemVentaSueno" href="/store/product/{{id}}" >{{name}}</a></h1>
-                                <p><a id="itemVentaSueno" href="/store/product/{{id}}" >${{price}}</a></p>
+                                <h1><a id="itemVentaSueno" href="/store/product/{{name}}">{{name}}</a></h1>
+                                <p><a id="itemVentaSueno" href="/store/product/{{name}}">${{price}}</a></p>
                             </div>
                         </div>
 
@@ -407,10 +543,10 @@
             </div>
         </div>
 
-       
+
         <div class="carga">
         </div>
-       
+
 
     </div>
 

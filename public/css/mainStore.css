@@ -226,19 +226,18 @@ header {
 }
 
 .sostenedor .producto_detalle {
-  cursor: pointer;
+  z-index: 1000;
   margin-left: 5%;
   margin-top: 20px;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  -webkit-box-orient: vertical;
+  -webkit-box-orient: horizontal;
   -webkit-box-direction: normal;
-      -ms-flex-flow: column nowrap;
-          flex-flow: column nowrap;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
+      -ms-flex-flow: row nowrap;
+          flex-flow: row nowrap;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
   -ms-flex-line-pack: center;
       align-content: center;
   -webkit-box-align: center;
@@ -252,6 +251,263 @@ header {
   background: white;
   -webkit-box-shadow: 5px 14px 31px -13px rgba(0, 0, 0, 0.65);
   box-shadow: 5px 14px 31px -13px rgba(0, 0, 0, 0.65);
+}
+
+.sostenedor .producto_detalle .imagen_producto {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-flow: column nowrap;
+          flex-flow: column nowrap;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -ms-flex-line-pack: center;
+      align-content: center;
+}
+
+.sostenedor .producto_detalle .informa {
+  margin-left: -100px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-flow: column nowrap;
+          flex-flow: column nowrap;
+  -ms-flex-line-pack: distribute;
+      align-content: space-around;
+  -webkit-box-align: space-around;
+      -ms-flex-align: space-around;
+          align-items: space-around;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  width: 50%;
+  height: 100%;
+}
+
+.sostenedor .producto_detalle .informa .caja_informa {
+  width: 100%;
+  height: 100%;
+}
+
+.sostenedor .producto_detalle .informa .caja_informa .detalles {
+  margin-top: 10px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-flow: column nowrap;
+          flex-flow: column nowrap;
+  height: 40%;
+}
+
+.sostenedor .producto_detalle .informa .caja_informa .detalles .precio {
+  font-weight: 800;
+  font-size: 2vw;
+  color: #ED978C;
+  -webkit-filter: opacity(0.5);
+          filter: opacity(0.5);
+  margin-top: -10px;
+  font-family: "Nunito Sans";
+}
+
+.sostenedor .producto_detalle .informa .caja_informa .detalles .description {
+  margin-top: 20px;
+  font-size: 1vw;
+  color: #D89C93;
+  -webkit-filter: opacity(0.7);
+          filter: opacity(0.7);
+}
+
+.sostenedor .producto_detalle .informa .caja_informa .detalles H1 {
+  font-size: 3vw;
+  color: #ED978C;
+}
+
+.sostenedor .producto_detalle .informa .caja_informa .caracteristica {
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  height: 6vh;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-flow: row wrap;
+          flex-flow: row wrap;
+  margin-left: -20px;
+  margin-top: -10px;
+}
+
+.sostenedor .producto_detalle .informa .caja_informa .caracteristica p {
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  margin-left: 15px;
+  padding: 2px;
+  padding-left: 8px;
+  padding-right: 8px;
+  border-radius: 15px;
+  margin-top: 12px;
+  background: rgba(247, 235, 235, 0.5);
+  color: #D89C93;
+  -webkit-filter: opacity(1);
+          filter: opacity(1);
+  font-weight: 300;
+  font-size: 1vw;
+}
+
+.sostenedor .producto_detalle .informa .caja_informa .caracteristica p strong {
+  color: #D89C93;
+}
+
+.sostenedor .producto_detalle .informa .caja_informa h2 {
+  margin-top: 60px;
+  color: #D89C93;
+  -webkit-filter: opacity(0.5);
+          filter: opacity(0.5);
+}
+
+.sostenedor .producto_detalle .informa .caja_informa .comentario {
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  margin-top: 10px;
+  height: 30%;
+  overflow-x: scroll;
+  -webkit-box-shadow: inset 0px 0px 15px -4px rgba(0, 0, 0, 0.75);
+  box-shadow: inset 0px 0px 15px -4px rgba(0, 0, 0, 0.75);
+  border-radius: 15px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-flow: column nowrap;
+          flex-flow: column nowrap;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  z-index: 400000;
+}
+
+.sostenedor .producto_detalle .informa .caja_informa .comentario .sostenedor_comentario {
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  position: relative;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-flow: row nowrap;
+          flex-flow: row nowrap;
+  width: 95%;
+  background: white;
+  margin: 15px;
+  border-radius: 10px;
+  padding: 5px;
+  -webkit-box-shadow: 0px 0px 15px -6px rgba(0, 0, 0, 0.75);
+  box-shadow: 0px 0px 15px -6px rgba(0, 0, 0, 0.75);
+}
+
+.sostenedor .producto_detalle .informa .caja_informa .comentario .sostenedor_comentario .persona {
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  width: 40%;
+  text-align: center;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-flow: column nowrap;
+          flex-flow: column nowrap;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  padding: 8px;
+}
+
+.sostenedor .producto_detalle .informa .caja_informa .comentario .sostenedor_comentario .persona .nombre {
+  font-weight: 800;
+  font-size: 1.4vw;
+}
+
+.sostenedor .producto_detalle .informa .caja_informa .comentario .sostenedor_comentario .persona .fecha {
+  font-size: .8vw;
+  color: #D89C93;
+  -webkit-filter: opacity(0.7);
+          filter: opacity(0.7);
+}
+
+.sostenedor .producto_detalle .informa .caja_informa .comentario .sostenedor_comentario .persona .rating {
+  font-size: .8vw;
+  color: #D89C93;
+  -webkit-filter: opacity(0.7);
+          filter: opacity(0.7);
+}
+
+.sostenedor .producto_detalle .informa .caja_informa .comentario .sostenedor_comentario .persona_comentario {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-flow: column nowrap;
+          flex-flow: column nowrap;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  width: 60%;
+  font-size: 1vw;
+  color: #D89C93;
+  -webkit-filter: opacity(0.7);
+          filter: opacity(0.7);
+  padding: 8px;
+}
+
+.sostenedor .producto_detalle .botones {
+  width: 5%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-flow: column nowrap;
+          flex-flow: column nowrap;
+  -webkit-box-pack: start;
+      -ms-flex-pack: start;
+          justify-content: flex-start;
+  -ms-flex-line-pack: start;
+      align-content: flex-start;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  justify-items: flex-start;
+  -ms-flex-item-align: start;
+      align-self: flex-start;
+  margin-top: 35px;
+}
+
+.sostenedor .producto_detalle .botones .cerrar {
+  margin: 8px;
+}
+
+.sostenedor .producto_detalle .mas {
+  margin: 8px;
+}
+
+.sostenedor .producto_detalle .heart {
+  margin: 8px;
 }
 
 .sostenedor .barraBusqueda {
