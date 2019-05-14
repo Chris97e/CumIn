@@ -101,23 +101,34 @@ body {
     }
 }
 
-.transitor {
-    margin-top: -40px;
-    width: 100vw;
+.pasarPagina{
+
+    display: flex;
+    flex-flow: column nowrap;
     
-    svg {
-        width: 100%;
-        fill: #F7D6D0;
+    justify-content: center;
+
+
+    .transitor {
+        margin-top: -40px;
+        width: 100vw;
+        
+        svg {
+            width: 100%;
+            fill: #F7D6D0;
+        }
+        
     }
     
-}
-
-.chars {
-    width: 100vw;
-    height: 90vh;
-    background: #F7D6D0;
-    margin-top: -90px;
-  
+    .chars {
+        width: 100vw;
+        height: 90vh;
+        filter: opacity(0.8);
+        background: #F7D6D0;
+        margin-top: -53px;
+        
+        
+    }
 }
 
 .backgroundtop{
