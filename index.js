@@ -58,6 +58,11 @@ app.get('/', function (request, response) {
 });
 
 
+app.get('/check', function (request, response) {
+    
+    
+    response.render('check');
+});
 
 app.get('/store/:filtro?', function (request, response) {
     

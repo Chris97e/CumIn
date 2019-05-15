@@ -184,7 +184,7 @@ header nav .right ul {
 }
 
 .carrito_link .numeroProductos {
-  margin-top: -2px;
+  margin-top: -4px;
   margin-left: 10px;
   border-radius: 50px;
   display: -webkit-box;
@@ -204,13 +204,23 @@ header nav .right ul {
           align-items: center;
   justify-items: center;
   text-align: center;
-  background: #EFACA0;
+  background: #f5c0b3;
+  /* Old browsers */
+  /* FF3.6-15 */
+  /* Chrome10-25,Safari5.1-6 */
+  background: -webkit-gradient(linear, left top, right top, from(#f5c0b3), color-stop(50%, #f4ad9f), to(#f9a08f));
+  background: linear-gradient(to right, #f5c0b3 0%, #f4ad9f 50%, #f9a08f 100%);
+  /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+  filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#f5c0b3', endColorstr='#f9a08f',GradientType=1 );
+  /* IE6-9 */
 }
 
 .carrito_link .numeroProductos .cantidad {
   text-align: center;
-  padding-left: 6px;
-  padding-right: 6px;
+  padding-top: 5px;
+  padding-bottom: 5px;
+  padding-left: 10px;
+  padding-right: 10px;
   font-family: "Nunito Sans";
   font-weight: 600;
   color: white;

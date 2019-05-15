@@ -1,0 +1,143 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+
+
+
+body{
+    overflow: hidden;    
+}
+
+.contenedorPadre { 
+    display: flex;
+    flex-flow: column nowrap;
+    justify-content: center;
+    align-content: center;
+    align-items: center;
+    box-sizing: border-box;
+    width: 100vw;
+    height: 100vh;
+    
+    justify-content: center;
+    justify-items: center;
+    
+    
+    .fondo{
+        
+        position: fixed;
+        display: none;
+        flex-flow: row nowrap;
+        bottom: -10vh;
+        margin-left:100px; 
+        z-index: -1;
+        
+        svg{
+            align-self: flex-start;
+            width: 100%;
+            
+        }
+        
+    }
+    
+    
+    .productos{
+        
+        display: flex;
+        flex-flow: column nowrap;
+        
+        align-content: center;
+        justify-items: center;
+        align-items: center;
+        margin-top: -15vh;
+        border-radius: 50px;
+        width: 90%;
+        height: 70%;
+        background: white;
+        -webkit-box-shadow: 5px 14px 31px -13px rgba(0,0,0,0.65);
+        -moz-box-shadow: 5px 14px 31px -13px rgba(0,0,0,0.65);
+        box-shadow: 5px 14px 31px -13px rgba(0,0,0,0.65);
+        
+        .titulos{
+            margin-top: -80px;
+            align-self: flex-start;
+            display: flex;
+            flex-flow: row nowrap;
+            margin: 20px;
+            
+            h1{
+                margin: 10px;
+                
+                
+            }
+        }
+        
+        .micarrito{
+            
+            
+            width: 80%;
+            height: 65%;
+            overflow-x: scroll;
+            display: flex;
+            flex-flow: row nowrap;
+            border-radius: 40px;
+            z-index: 1000;
+            -webkit-box-shadow: inset 5px 14px 31px -13px rgba(0,0,0,0.65);
+            -moz-box-shadow: inset 5px  14px 31px -13px rgba(0,0,0,0.65);
+            box-shadow:  inset 5px 14px 31px -13px rgba(0,0,0,0.65);
+            
+            
+            .item{
+                
+                margin: 15px;
+                -webkit-box-shadow: 5px 14px 31px -13px rgba(0,0,0,0.65);
+                -moz-box-shadow: 5px 14px 31px -13px rgba(0,0,0,0.65);
+                box-shadow: 5px 14px 31px -13px rgba(0,0,0,0.65);
+                border-radius: 30px;
+                text-align: center;
+                display: flex;
+                flex-flow: column nowrap;
+                align-content: space-around;
+               justify-content: center;
+                
+            }
+            
+        }
+        
+        .pene{
+            
+            
+            margin-top: 30px;
+            width: 20%;
+            height: 40px;
+            border-radius: 20px;
+            border: none;
+            font-size: 20px;
+            font-weight: 800;
+            color: white;
+            background: #f5c0b3; /* Old browsers */
+            background: -moz-linear-gradient(left, #f5c0b3 0%, #f4ad9f 50%, #f9a08f 100%); /* FF3.6-15 */
+            background: -webkit-linear-gradient(left, #f5c0b3 0%,#f4ad9f 50%,#f9a08f 100%); /* Chrome10-25,Safari5.1-6 */
+            background: linear-gradient(to right, #f5c0b3 0%,#f4ad9f 50%,#f9a08f 100%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */            
+            
+        }
+        
+        
+        
+    }
+    
+    
+    .adorno{
+        
+        position: fixed;
+        bottom: 0px;
+        left: 0px;
+        z-index: 1000;
+        
+        svg{
+            width: 100%;
+        }
+        
+    }
+    
+}

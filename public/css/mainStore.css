@@ -1,6 +1,66 @@
 @import url("https://fonts.googleapis.com/css?family=Lobster");
 @import url("https://fonts.googleapis.com/css?family=Open+Sans:300,400,600,700");
 @import url("https://fonts.googleapis.com/css?family=Nunito+Sans:300,400,600,700,800,900");
+#anadirCarrito {
+  cursor: pointer;
+  margin-top: 5px;
+}
+
+.carrito_link {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-flow: row nowrap;
+          flex-flow: row nowrap;
+  margin-top: 3px;
+}
+
+.carrito_link .numeroProductos {
+  margin-top: -4px;
+  margin-left: 10px;
+  border-radius: 50px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-flow: row nowrap;
+          flex-flow: row nowrap;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -ms-flex-line-pack: center;
+      align-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  justify-items: center;
+  text-align: center;
+  background: #f5c0b3;
+  /* Old browsers */
+  /* FF3.6-15 */
+  /* Chrome10-25,Safari5.1-6 */
+  background: -webkit-gradient(linear, left top, right top, from(#f5c0b3), color-stop(50%, #f4ad9f), to(#f9a08f));
+  background: linear-gradient(to right, #f5c0b3 0%, #f4ad9f 50%, #f9a08f 100%);
+  /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+  filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#f5c0b3', endColorstr='#f9a08f',GradientType=1 );
+  /* IE6-9 */
+}
+
+.carrito_link .numeroProductos .cantidad {
+  text-align: center;
+  padding-top: 5px;
+  padding-bottom: 5px;
+  padding-left: 10px;
+  padding-right: 10px;
+  font-family: "Nunito Sans";
+  font-weight: 600;
+  color: white;
+  margin-left: -1px;
+}
+
 a {
   text-decoration: none;
   -webkit-text-emphasis: none;
