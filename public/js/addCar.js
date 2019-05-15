@@ -1,8 +1,15 @@
 function paginaCargada() {
 
     //Elementos obtenidos del HTML
-    var anadirCarritoStore = document.getElementById("anadirCarrito");
+    var anadirCarritoStore = document.querySelectorAll('.vector_mas');
     var anadirCarritoProducto = document.getElementById("masCarrito");
+    var displayNumeroProductos = document.querySelector('.cantidad');
+   
+    if(localStorage.getItem('carNumber')){
+    
+        displayNumeroProductos.innerHTML = localStorage.getItem('carNumber');
+
+    }
 
     //Variable carrito creado Localmente
     var listaProducto = [];
@@ -13,10 +20,13 @@ function paginaCargada() {
 
         function agregarCarrito() {
 
-            var padreBoton = boton.parentNode;
-            var name = paddre.querySelector('.producto__nombre').innerText;
-            var price = padre.querySelector('.producto__precio').innerText;
-            var img = padre.querySelector('.imagen_producto').src;
+            
+            var padres = boton.parentNode;
+            var padreBoton = padres.parentNode;
+            var name = padreBoton.querySelector('.producto__nombre').innerText;
+            
+            var price = padreBoton.querySelector('.producto__precio').innerText;
+            var img = padreBoton.querySelector('.calocha_imagen').src;
 
             var product = {
 
@@ -26,18 +36,15 @@ function paginaCargada() {
 
             };
 
+            console.log(product);
+
             listaProducto.push(product);
-
-
-
+            refreshCar();
+            localStorage.setItem('productsList', JSON.stringify(listaProducto) );
 
         }
 
-
-
-
-
-
+        boton.addEventListener('click', agregarCarrito);
 
     }
 
@@ -47,8 +54,14 @@ function paginaCargada() {
 
     //metodo para actualizar la variable del numero de elemetos del carrito
     function refreshCar(){
-        listaProducto.length;
+
+        displayNumeroProductos.innerHTML =  listaProducto.length;
+        localStorage.setItem("carNumber", listaProducto.length);
+    
     }
 
 }
+
+
 window.addEventListener('load', paginaCargada);
+

@@ -13,6 +13,11 @@ $primaryFont: 'Nunito Sans';
 $openSans: 'Open Sans';
 $logoFont: 'Lobster';
 
+#anadirCarrito{
+    cursor: pointer;
+    z-index: 1000;
+}
+
 a{
     text-decoration: none;
     text-emphasis: none;
