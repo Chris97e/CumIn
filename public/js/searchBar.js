@@ -8,9 +8,9 @@ window.onload = function () {
 
 
     var cerrar = document.getElementById("mariposa");
-    var anadirCarritoProducto = document.getElementById("masCarrito");
+    
     var anadirFavoritos = document.getElementById("favoritos");;
-    var anadirCarritoStore = document.getElementById("anadirCarrito");
+    
 
 
 

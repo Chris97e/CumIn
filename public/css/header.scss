@@ -157,6 +157,42 @@ header {
     
 }
 
+
+.carrito_link{
+
+    display: flex;
+    flex-flow: row nowrap;
+    margin-top: 3px;
+    
+
+    .numeroProductos{
+        margin-top: -2px;
+        margin-left: 10px;
+        border-radius: 50px;
+        display: flex;
+        flex-flow: row nowrap;
+        justify-content: center;
+        align-content: center;
+        align-items: center;
+        justify-items: center;
+        text-align: center;
+        background: #EFACA0;
+
+        .cantidad{
+            text-align: center;
+            padding-left: 6px;
+            padding-right: 6px;
+            font-family: $primaryFont;
+            font-weight: 600;
+            color: white;
+            margin-left: -1px;
+            
+        }
+    }
+
+
+}
+
 #desplegable{
     display: none;
     flex-direction: column;
