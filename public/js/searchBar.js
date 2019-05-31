@@ -8,7 +8,6 @@ window.onload = function () {
 
 
     var cerrar = document.getElementById("mariposa");
-    
     var anadirFavoritos = document.getElementById("favoritos");;
     
 
@@ -48,7 +47,9 @@ window.onload = function () {
 
     var brand = "";
     if (localStorage.getItem("brand")) {
+        
         brand = localStorage.getItem("brand");
+        
     }
 
     var typeProduct = document.getElementById("claseProducto");
@@ -94,6 +95,10 @@ window.onload = function () {
     if (localStorage.getItem(estadoSort)) {
         estadoSort.innerHTML = localStorage.getItem(estadoSort);
     }
+
+    
+
+
     var bestSelling = document.getElementById("Best");
     var rating = document.getElementById("Rating");
     var none = document.getElementById("None");
@@ -102,6 +107,12 @@ window.onload = function () {
 
     //----------------elements for the filter by brand
     var estadoBrand = document.getElementById("brandProducts");
+    
+    if (localStorage.getItem("branda")) {
+
+
+        estadoBrand.innerHTML = localStorage.getItem("branda");
+    }
 
     var feelztoys = document.getElementById("Feelztoys");
     var liebe = document.getElementById("Liebe");
@@ -474,7 +485,7 @@ window.onload = function () {
 
 
         if ((creadoBrand == "true" || creadoType == "true" || creadoSort == "true") && estoyCambiando == false) {
-            console.log("Salchicon cervecero");
+            
             localStorage.setItem("brand", a);
             localStorage.setItem("creadoBrand", true);
             location.href = url + '&brand=' + a;
@@ -499,30 +510,36 @@ window.onload = function () {
     feelztoys.addEventListener('click', function () {
         estadoBrand.innerHTML = "FEELZTOYS";
         filtrarBrand("Feelztoys", brand);
+        localStorage.setItem("branda", "FEELZTOYS");
         ocultarTodo();
     });
 
     liebe.addEventListener('click', function () {
         estadoBrand.innerHTML = "LIEBE";
         filtrarBrand("Liebe", brand);
+        localStorage.setItem("branda", "LIEBE");
         ocultarTodo();
     });
 
     satisyer.addEventListener('click', function () {
         estadoBrand.innerHTML = "SATISFYER";
         filtrarBrand("Satisfyer", brand);
+        localStorage.setItem("branda", "SATISFYER");
         ocultarTodo();
     });
 
     funFactory.addEventListener('click', function () {
         estadoBrand.innerHTML = "FUN FACTORY";
         filtrarBrand("Fun", brand);
+        localStorage.setItem("branda", "FUN FACTORY");
         ocultarTodo();
     });
 
     none.addEventListener('click', function () {
         estadoBrand.innerHTML = "NONE";
         filtrarBrand("none", brand);
+        
+        localStorage.setItem("branda", "NONE");
         ocultarTodo();
     });
 

@@ -7,14 +7,19 @@
     <title>Home | CumIn</title>
     <link rel="stylesheet" href="./css/header.css">
     <link rel="stylesheet" href="./css/main.css">
+    <link rel="stylesheet" href="./css/animate.css">
     <script src="./js/barMenu.js"></script>
     <script src="./js/addCar.js"></script>
+    <script src="./js/jquery-3.4.1.js"></script>
+    <script src="./js/jquery.flexslider.js"></script>
+    <script src="./js/slider.js"></script>
+
 
 </head>
 
 <body id="bodyHome">
     <header>
-        <nav>
+        <nav class="animated fadeInDown">
             <div class="container left">
                 <ul>
                     <li><a id="menubottom" href="/">
@@ -92,7 +97,7 @@
                                                         d="M29.8,5.52c-0.21-0.27-0.54-0.43-0.88-0.43H6.94L5.92,0.86C5.8,0.36,5.35,0,4.83,0H1.12C0.5,0,0,0.5,0,1.12
                                                     s0.5,1.12,1.12,1.12h2.82L7.6,17.53c0.12,0.51,0.57,0.86,1.09,0.86h17.49c0.52,0,0.97-0.35,1.09-0.85L30,6.49
                                                     C30.08,6.15,30.01,5.8,29.8,5.52z M25.3,16.14H9.58l-2.1-8.8h20L25.3,16.14z" />
-                                                </g>                
+                                                </g>
                                             </g>
                                             <g>
                                                 <g>
@@ -140,29 +145,88 @@
         </svg>
 
     </div>
-    <div class="letrasFondo">
+    <div class="letrasFondo animated fadeInUp">
         <div class="decoracion uno">
-            <p class="unot">Desire</p>.
+            <div class="flexslider">
+                <ul class="slides">
+                    <li>
+                        <p class="unot animated fadeIn ">Desire.</p>
+                    </li>
+                    <li>
+                        <p class="unot animated fadeIn ">Feels.</p>
+                    </li>
+                    <li>
+                        <p class="unot animated fadeIn ">Pasion.</p>
+                    </li>
+                    <li>
+                        <p class="unot animated fadeIn ">Power.</p>
+                    </li>
+                </ul>
+            </div>
         </div>
+
         <div class="decoracion dos"></div>
         <div class="decoracion tres"></div>
-        <div class="decoracion cuatro">
-            <p class="cuatrot">Pleasure.</p>
+        <div class="decoracion cuatro flexslider">
+
+            <ul class="slides">
+                <li>
+                    <p class="unot animated fadeIn ">Pleasures.</p>
+                </li>
+                <li>
+                    <p class="unot animated fadeIn ">Underneath.</p>
+                </li>
+                <li>
+                    <p class="unot animated fadeIn ">loveling.</p>
+                </li>
+                <li>
+                    <p class="unot animated fadeIn ">Touched.</p>
+                </li>
+
+
+            </ul>
+
+
+
         </div>
     </div>
     <div class="slider">
         <div class="great">
 
-            <div class="container left">
+            <div class="container left animated fadeInUp">
                 <h1>Cum’<br /><strong>IN</strong></h1>
             </div>
-            <div class="container center">
-                <div class="texto">
-                    <p>Let your pleasures come out without limitations. Dare yourself to break yourself.</p>
+
+
+
+
+
+            <div class="container center animated fadeInUp">
+                <div class="texto flexslider">
+
+                    <ul class="slides">
+
+
+                        {{#each item}}
+
+                        <li>
+                            <p>
+                                {{comentario}}<br><br><strong>{{user}}</strong> -Valoración: {{rate}}/5
+                            </p>
+
+                        </li>
+
+                        {{/each}}
+
+
+
+                    </ul>
+
+
                 </div>
                 <button>Go to Store</button>
             </div>
-            <div class="container right"><img src="./imgs/banana.png" alt=""></div>
+            <div class="container right animated fadeInUp"><img src="./imgs/banana.png" alt=""></div>
         </div>
 
     </div>
@@ -180,7 +244,92 @@
         </div>
         <div class="chars">
 
+            <div class="cuestionario">
+                <div class="titulo  animated fadeInUp">
+                    <p class="cum">Cum’</p>
+                    <p class="hot"> HOT</p>
+                </div>
+                <div class="hacer animated fadeInUp">
+
+                    <div class="unoP cajaPre animated fadeInUp ">
+                        <h1>¿QUÉ TIPO DE CONSOLADOR ERES?</h1>
+                        <p>Ven, descubre como se refleja tu personalidad en jugetes sexuales.</p>
+                        <button id="go"> ¡GO!</button>
+                    </div>
+                    <div class="dosP cajaPre  animated fadeIn">
+                        <h1>CUÉNTANOS, ¿CÓMO TE LLAMAS?</h1>
+                        <input class="inpu" type="text" name="" id="nombre">
+                        <div class="res">
+                            <p><button id="seguirNombre">Seguir</button></p>
+                        </div>
+                    </div>
+                    <div class="tresP cajaPre animated fadeIn">
+                        <h1>¿ESTÁS INTERESADO EN?</h1>
+                        <div class="res">
+                            <p><button id="chicos">Chicos</button></p>
+                            <p><button id="chicas">Chicas</button></p>
+                            <p><button id="ambos">Hay que probar de todo en esta vida</button></p>
+                        </div>
+
+                    </div>
+                    <div class="cuatroP cajaPre animated fadeIn">
+                        <h1>¿CONSIDERAS TU CUERPO CÓMO?</h1>
+                        <div class="res">
+                            <p><button id="delgado">Delgado</button></p>
+                            <p><button id="gordito">Gordito</button></p>
+                            <p><button id="musculoso">Musculoso</button></p>
+                        </div>
+                    </div>
+                    <div class="cincoP cajaPre animated fadeIn">
+                        <h1>¿CONSIDERAS TU ALTURA COMO?</h1>
+                        <div class="res">
+                            <p><button id="alto">Alto</button></p>
+                            <p><button id="enano">Enano</button></p>
+                            <p><button id="promedio">Promedio</button></p>
+                        </div>
+                    </div>
+                    <div class="seisP cajaPre animated fadeIn">
+                        <h1>¿DESCRIBES TU PERSONALIDAD COMO?</h1>
+                        <div class="res">
+                            <p><button id="intro">Introvertido</button></p>
+                            <p><button id="extro">Extrovertido</button></p>
+                        </div>
+                    </div>
+                    <div class="sieteP cajaPre animated fadeIn">
+                        <h1>¿TE CONSIDERAS MÁS?</h1>
+                        <div class="res">
+                            <p><button id="pensa">Pensativo </button></p>
+                            <p><button id="compul">Compulsivo</button></p>
+                        </div>
+                    </div>
+                    <div class="ochoP cajaPre animated fadeIn">
+                        <h1>¿SUELES TOMAR TU CAFÉ?</h1>
+                        <div class="res">
+                            <p><button id="azucar">Con Azúcar</button></p>
+                            <p><button id="sina">Sin Azúcar</button></p>
+                            <p><button id="sinc">Qué feo el café</button></p>
+                        </div>
+                    </div>
+                    <div class="nueveP cajaPre">
+
+                        <h1>¿SUELES TOMAR TU CAFÉ?</h1>
+                        <div class="res">
+                            <p><button id="azucar">Con Azúcar</button></p>
+                            <p><button id="sina">Sin Azúcar</button></p>
+                            <p><button id="sinc">Qué feo el café</button></p>
+                        </div>
+
+
+                    </div>
+                    <div class="diezP cajaPre"></div>
+                    <div class="onceP cajaPre"></div>
+                    <div class="doceP cajaPre"></div>
+
+                </div>
+            </div>
+
         </div>
+
     </div>
 </body>
 

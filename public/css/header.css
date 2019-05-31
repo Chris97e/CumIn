@@ -227,6 +227,11 @@ header nav .right ul {
   margin-left: -1px;
 }
 
+.carrito_link:hover svg {
+  -webkit-animation: shake 1s;
+          animation: shake 1s;
+}
+
 #desplegable {
   display: none;
   -webkit-box-orient: vertical;

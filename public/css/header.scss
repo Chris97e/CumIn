@@ -200,6 +200,18 @@ header {
     
 }
 
+.carrito_link:hover{
+
+    
+    svg{
+        
+        animation: shake 1s;
+        
+
+    }
+
+}
+
 #desplegable{
     display: none;
     flex-direction: column;

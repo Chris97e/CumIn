@@ -7,10 +7,28 @@ body {
 * {
   margin: 0;
   padding: 0;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+}
+
+.flex-nav-prev {
+  display: none;
+}
+
+.flex-nav-next {
+  display: none;
+}
+
+.flex-control-nav.flex-control-paging {
+  display: none;
+}
+
+.flex-direction-nav {
+  display: none;
 }
 
 .slider {
-  margin-top: 50px;
+  margin-top: 100px;
   width: 100vw;
   height: 70vh;
   display: -webkit-box;
@@ -65,25 +83,59 @@ body {
   line-height: 55px;
 }
 
+.slider .great .center {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-flow: column wrap;
+          flex-flow: column wrap;
+}
+
 .slider .great .center .texto {
   width: 100%;
+  height: 300px;
   border-right: 8px solid rgba(247, 176, 169, 0.45);
   border-bottom: 8px solid rgba(247, 176, 169, 0.45);
 }
 
-.slider .great .center .texto p {
-  width: 80%;
+.slider .great .center .texto ul {
+  width: 100%;
+  height: 100%;
+}
+
+.slider .great .center .texto ul li {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-flow: column nowrap;
+          flex-flow: column nowrap;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -ms-flex-line-pack: center;
+      align-content: center;
+}
+
+.slider .great .center .texto ul li p {
+  padding-left: 10px;
+  margin-top: 80px;
+  width: 90%;
   font-family: "Nunito Sans";
   color: #CE817C;
-  padding-bottom: 60px;
-  margin-top: 200px;
   font-weight: 100;
 }
 
 .slider .great .center button {
   border: none;
   border-radius: 10px;
-  margin-top: 50px;
+  margin-top: 30px;
   width: 150px;
   height: 40px;
   cursor: pointer;
@@ -136,10 +188,260 @@ body {
 .pasarPagina .chars {
   width: 100vw;
   height: 90vh;
+  position: relative;
   -webkit-filter: opacity(0.8);
           filter: opacity(0.8);
   background: #F7D6D0;
-  margin-top: -53px;
+  margin-top: -36px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-flow: column nowrap;
+          flex-flow: column nowrap;
+  -ms-flex-line-pack: center;
+      align-content: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.pasarPagina .chars .cuestionario {
+  width: 80%;
+  height: 70%;
+}
+
+.pasarPagina .chars .cuestionario .titulo {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-flow: row nowrap;
+          flex-flow: row nowrap;
+  -webkit-box-align: baseline;
+      -ms-flex-align: baseline;
+          align-items: baseline;
+}
+
+.pasarPagina .chars .cuestionario .titulo .cum {
+  font-family: "Lobster";
+  font-size: 100px;
+  color: #ED998E;
+}
+
+.pasarPagina .chars .cuestionario .titulo .hot {
+  color: white;
+  font-weight: bold;
+  font-size: 50px;
+}
+
+.pasarPagina .chars .cuestionario .hacer {
+  border-radius: 20px;
+  background: white;
+  width: 100%;
+  height: 70%;
+}
+
+.pasarPagina .chars .cuestionario .hacer .cajaPre {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  height: 350px;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-flow: column nowrap;
+          flex-flow: column nowrap;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -ms-flex-line-pack: center;
+      align-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  justify-items: center;
+}
+
+.pasarPagina .chars .cuestionario .hacer .cajaPre h1 {
+  color: #db6f61;
+  font-family: "Nunito Sans";
+}
+
+.pasarPagina .chars .cuestionario .hacer .cajaPre p {
+  color: #db6f61;
+}
+
+.pasarPagina .chars .cuestionario .hacer .cajaPre .res {
+  width: 100%;
+  margin-top: 30px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-flow: row nowrap;
+          flex-flow: row nowrap;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
+}
+
+.pasarPagina .chars .cuestionario .hacer .cajaPre .res button {
+  border: none;
+  border-radius: 10px;
+  width: auto;
+  padding: 15px;
+  height: 40px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  justify-items: center;
+  -ms-flex-line-pack: center;
+      align-content: center;
+  padding-top: 6px;
+  cursor: pointer;
+  color: white;
+  font-weight: bold;
+  font-size: 20px;
+  background: #f5c0b3;
+  /* Old browsers */
+  /* FF3.6-15 */
+  /* Chrome10-25,Safari5.1-6 */
+  background: -webkit-gradient(linear, left top, right top, from(#f5c0b3), color-stop(50%, #f4ad9f), to(#f9a08f));
+  background: linear-gradient(to right, #f5c0b3 0%, #f4ad9f 50%, #f9a08f 100%);
+  /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+  filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#f5c0b3', endColorstr='#f9a08f',GradientType=1 );
+  /* IE6-9 */
+}
+
+.pasarPagina .chars .cuestionario .hacer .unoP {
+  height: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-flow: column nowrap;
+          flex-flow: column nowrap;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -ms-flex-line-pack: center;
+      align-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  justify-items: center;
+}
+
+.pasarPagina .chars .cuestionario .hacer .unoP h1 {
+  color: #db6f61;
+  font-family: "Nunito Sans";
+}
+
+.pasarPagina .chars .cuestionario .hacer .unoP p {
+  color: #db6f61;
+}
+
+.pasarPagina .chars .cuestionario .hacer .unoP button {
+  border: none;
+  border-radius: 10px;
+  margin-top: 30px;
+  width: 150px;
+  height: 40px;
+  cursor: pointer;
+  color: white;
+  font-weight: bold;
+  font-size: 20px;
+  background: #f5c0b3;
+  /* Old browsers */
+  /* FF3.6-15 */
+  /* Chrome10-25,Safari5.1-6 */
+  background: -webkit-gradient(linear, left top, right top, from(#f5c0b3), color-stop(50%, #f4ad9f), to(#f9a08f));
+  background: linear-gradient(to right, #f5c0b3 0%, #f4ad9f 50%, #f9a08f 100%);
+  /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+  filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#f5c0b3', endColorstr='#f9a08f',GradientType=1 );
+  /* IE6-9 */
+}
+
+.pasarPagina .chars .cuestionario .hacer .dosP {
+  display: none;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-flow: column nowrap;
+          flex-flow: column nowrap;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -ms-flex-line-pack: center;
+      align-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  justify-items: center;
+}
+
+.pasarPagina .chars .cuestionario .hacer .dosP .inpu {
+  width: 550px;
+  height: 30px;
+}
+
+.pasarPagina .chars .cuestionario .hacer .dosP .res {
+  margin-top: 30px;
+}
+
+.pasarPagina .chars .cuestionario .hacer .tresP {
+  display: none;
+}
+
+.pasarPagina .chars .cuestionario .hacer .cuatroP {
+  display: none;
+}
+
+.pasarPagina .chars .cuestionario .hacer .cincoP {
+  display: none;
+}
+
+.pasarPagina .chars .cuestionario .hacer .seisP {
+  display: none;
+}
+
+.pasarPagina .chars .cuestionario .hacer .sieteP {
+  display: none;
+}
+
+.pasarPagina .chars .cuestionario .hacer .ochoP {
+  display: none;
+}
+
+.pasarPagina .chars .cuestionario .hacer .nueveP {
+  display: none;
+}
+
+.pasarPagina .chars .cuestionario .hacer .diezP {
+  display: none;
+}
+
+.pasarPagina .chars .cuestionario .hacer .onceP {
+  display: none;
+}
+
+.pasarPagina .chars .cuestionario .hacer .doceP {
+  display: none;
+}
+
+.final {
+  position: relative;
 }
 
 .backgroundtop {
