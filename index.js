@@ -22,13 +22,30 @@ var carrito = {};
 // Here I'm telling to mongodb that I want to conect specifically to the cumIn database
 
 // Connection URL
-const url = 'mongodb://localhost:27017';
+const url = 'mongodb+srv://Chris:<password>@cluster0-sowst.mongodb.net/test?retryWrites=true&w=majority';
 
 // Database Name
 const dbName = 'cumIn';
 
 // Create a new MongoClient
-const client = new MongoClient(url, { useNewUrlParser: true });
+const client = new MongoClient(url,
+
+
+    {
+        auth:{
+
+            user: 'Chris',
+            password: 'SeguraSegura12345'
+
+        }
+
+
+    }, {
+
+
+
+
+    });
 
 var db = null;
 
@@ -54,20 +71,20 @@ client.connect(function (err) {
 
 
 app.get('/', function (request, response) {
-    
 
-    
+
+
     var collection = db.collection('cumIn');
-    collection.find().toArray(function(err,docs){
-        assert.equal(err,null);
-        
-        
+    collection.find().toArray(function (err, docs) {
+        assert.equal(err, null);
 
-        var contexto ={
-        item: docs
+
+
+        var contexto = {
+            item: docs
         }
 
-        
+
         console.log(contexto.item);
 
         response.render('home', contexto);
@@ -186,7 +203,7 @@ app.get('/store/:filtro?', function (request, response) {
         assert.equal(err, null);
 
         coleccionSort = docs;
-        
+
 
 
         ////
@@ -199,7 +216,7 @@ app.get('/store/:filtro?', function (request, response) {
 
 
             if (sort == "best") {
-                
+
                 sortDisplay = "BEST SELLING";
 
                 coleccionSort.sort(function (a, b) {
@@ -267,7 +284,7 @@ app.get('/store/:filtro?', function (request, response) {
             carga: false,
             classDisplay: classDisplay,
             sortDisplay: sortDisplay,
-            brandDisplay:brandDisplay
+            brandDisplay: brandDisplay
 
 
         };
@@ -310,7 +327,7 @@ app.get('/store/product/:name', function (request, res) {
 
 
 
-app.listen(3000, function () {
+app.listen(process.env.PORT || 3000, function () {
     console.log('Aplicación ejemplo, escuchando el puerto 3000!');
 });
 
