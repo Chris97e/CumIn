@@ -22,7 +22,7 @@ var carrito = {};
 // Here I'm telling to mongodb that I want to conect specifically to the cumIn database
 
 // Connection URL
-const url = 'mongodb+srv://Chris:<password>@cluster0-sowst.mongodb.net/test?retryWrites=true&w=majority';
+const url = 'mongodb://localhost:27017';
 
 // Database Name
 const dbName = 'cumIn';
@@ -40,28 +40,13 @@ var db = null;
 // we use "once" on the event
 
 
-client.connect(url,{
+client.connect(function (err) {
+    assert.equal(null, err);
 
-    auth:{
-        user:'Chris',
-        password:'SeguraSegura12345'
-    }
-
-
-},function(err,client){
-
-    if(err) throw err;
     db = client.db(dbName);
     console.log("Conecction has been made!");
-    app.listen(process.env.PORT  || 12345);
-
-
+    //client.close();
 });
-
-//
-
-
-
 
 
 
@@ -101,6 +86,7 @@ app.get('/store/:filtro?', function (request, response) {
 
 
     var query = {}
+    
     var sort = "";
     var classDisplay = "EVERYTHING";
     var sortDisplay = "NONE";
@@ -325,7 +311,9 @@ app.get('/store/product/:name', function (request, res) {
 
 
 
-
+app.listen(3000, function () {
+    console.log('Aplicación ejemplo, escuchando el puerto 3000!');
+});
 
 function compare(a, b) {
 
