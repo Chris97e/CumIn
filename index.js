@@ -53,6 +53,7 @@ client.connect(url,{
     if(err) throw err;
     db = client.db(dbName);
     console.log("Conecction has been made!");
+    app.listen(process.env.PORT  || 12345);
 
 
 });
@@ -60,15 +61,7 @@ client.connect(url,{
 //
 
 
-client.connect(function (err) {
-    assert.equal(null, err);
 
-    db = client.db(dbName);
-    app.listen(process.env.PORT  || 12345);
-    console.log("Conecction has been made!");
-    
-    //client.close();
-});
 
 
 
